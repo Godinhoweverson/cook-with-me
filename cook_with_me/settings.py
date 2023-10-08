@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cook-with-me.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-drpfqayqxr.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-drpfqayqxr.us2.codeanyapp.com']
 
 
 # Application definition
