@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+   
 
 class Recipe(models.Model):
     featured_image = CloudinaryField('image')
@@ -14,3 +15,19 @@ class Recipe(models.Model):
     
     def number_of_likes(self):
         return self.likes.count()
+    
+class Comment(models.Model): 
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE) # Link comment to recipe key
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) # link comment to a user
+    first_name = models.CharField(max_length=50, blank=True, null=True)
+    last_name = models.CharField(max_length=50, blank=True, null=True)
+    email = models.EmailField(max_length=50, blank=True, null=True)
+    content_body = models.TextField(max_length=400)
+    comment_approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+  
+
+    def __str__(self):
+        return f"Comment {self.content_body} by {self.first_name or self.user.username}"
+
+
