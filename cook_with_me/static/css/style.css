@@ -1,3 +1,27 @@
-h1 {
-    color:red;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Montserrat:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: max-content;
+}
+
+.fonts {
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Navbar */
+.title-brand{  
+    font-size: 30px;
+}
+
+
+.container-home{
+    height: 600px;
 }
