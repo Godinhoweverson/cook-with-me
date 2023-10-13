@@ -1,28 +1,41 @@
 {% extends 'base.html' %}
-
+{% load static%}
 {% block title %}Cook with me{% endblock %}
 
 {% block content %}
 <div class="container-fluid">
     <div class="row title-container">
+        <div class="col-lg-6 col-12 image-container">
+            <img class="centered-image" src="{% static 'images/title-image.jpg'%}" alt="" class="centered-image">
+        </div>
         <div class="col-lg-6 col-12 content-title">
-            <H1>Cook with me</H1>
+            <H1 class="fonts">Cook with me <i class="fa-thin fa-user-chef" style="color: #000000;"></i></H1>
             <p>By Godinho</p>
         </div>            
-        <div class="col-lg-6 col-12 image-container">
-            <p class="centered-image">image</p>
-            <img src="" alt="" class="centered-image">
-        </div>
+      
     </div>
 
 </div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+    <path d="M0 50 Q 250 100 500 50 T 1000 50" fill="none" stroke="silver" stroke-width="1"></path>
+</svg>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-6 col-12"  style="background-color: green; height: 600px" >
-            Text
+        <div class="col-lg-6 col-12">
+            <h2>About</h2>
+            <p>Born from an unwavering passion for the culinary arts, "Cook with Me" isn't just a digital recipe book—it's a personal journey into the heart and soul of my kitchen. Every dish presented here is more than just a list of ingredients; it's a story, a memory, a cherished moment that I've been fortunate enough to experience. My sincerest hope is to transfer those emotions, those flavors, and those moments right into your kitchen.
+
+                As the founder of "Cook with Me", I've woven my personal experiences, my triumphs, and even my delightful mistakes into each and every recipe. I believe that the kitchen isn't just a place to prepare food, but a sanctuary of creativity and love. It's where life's most candid moments happen, over simmering pots and sizzling pans. And when we share these creations, they become more than meals—they become memories.
+                
+                Here, you won't simply be browsing through recipes; you'll be diving deep into a passion project that's been years in the making. Each page, each instruction, and each ingredient is a piece of my journey, offered warmly to you.
+                
+                So I invite you to roll up your sleeves, ignite that spark of culinary curiosity, and embark on this flavorful adventure with me. Dive deep into the essence of what it means to cook, to share, and to celebrate life's simple pleasures. Because, at the end of the day, there truly is no joy as profound as the joy of cooking and relishing the result.
+                
+                Welcome to "Cook with Me". Pull up a chair, and let's make some memories together at my table.</p>
         </div>
-        <div class="col-lg-6 col-12"  style="background-color: orange; height: 600px" >
-            Text
+        <div class="col-lg-6 col-12">
+            <img class="centered-image" src="{% static 'images/chef.png'%}" alt="" class="centered-image">
+
         </div>
     </div>
 
