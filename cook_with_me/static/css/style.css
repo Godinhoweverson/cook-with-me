@@ -18,8 +18,8 @@ body {
 }
 
 /* Navbar */
-.title-brand{  
-    font-size: 30px;
+.logo{  
+    font-size: 10px;
 }
 
 .title-container {
@@ -47,4 +47,22 @@ text-align: center;
     width: 400px;
     height: 400px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.container-about h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 70px;
+}
+
+.container-about p{
+    text-align: center;
+    padding: 30px;
+}
+
+.corousel-image {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto; 
 }
