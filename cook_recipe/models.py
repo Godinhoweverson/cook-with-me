@@ -21,8 +21,8 @@ class Recipe(models.Model):
         return self.likes.count()
     
 class Comment(models.Model): 
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE) # Link comment to recipe key
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) # link comment to a user
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
     email = models.EmailField(max_length=50, blank=True, null=True)

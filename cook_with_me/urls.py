@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from cook_recipe.views import home, recipe, register, login_page
+from cook_recipe.views import home, recipe_list, register, login_page
+from cook_recipe import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', home, name='Home'),
-    path('recipe/', recipe, name='Recipe'),
+    path('recipes/', views.recipe_list, name='recipe_list'),
+    path('recipes/<int:recipe_id>/', views.recipe_content, name='recipe_content'),
     path('register/', register, name='Register'),
     path('login_page/', login_page, name='Login'),
 
