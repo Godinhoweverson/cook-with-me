@@ -8,6 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Recipe(models.Model):
     featured_image = CloudinaryField('image')
+    recipe_image = CloudinaryField('image', null=True, blank=True)
     title = models.CharField(max_length=150, unique=True)
     created_date = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
