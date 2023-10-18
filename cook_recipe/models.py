@@ -1,10 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-   
 
 STATUS = ((0, "Draft"), (1, "Published"))
-
 
 class Recipe(models.Model):
     featured_image = CloudinaryField('image')
@@ -30,9 +28,6 @@ class Comment(models.Model):
     content_body = models.TextField(max_length=400)
     comment_approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
-  
-
+    
     def __str__(self):
         return f"Comment {self.content_body} by {self.first_name or self.user.username}"
-
-
