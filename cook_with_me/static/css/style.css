@@ -151,211 +151,33 @@ text-align: center;
 }
 
 /*recipe_content */
-
-
-.container-fluid {
-    max-width: 100%;
-    overflow: hidden;
+.box-size{
+height:70vh;
 }
 
-.recipe-box {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.recipe-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-.content h1{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-@media(max-width: 767px){
-    .recipe-box {
-        flex-direction: column;
-    }
-}@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Montserrat:wght@500&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    height: auto;
-}
-
-/* Navbar */
-.logo{  
-    font-size: 10px;
-}
-
-/* First section */
-
-.title-container {
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-title{
-text-align: center;
-}
-
-.content-title h1{
-    font-size: 150px;
-    font-family: 'Great Vibes', cursive;
-}
-.image-container{
-    text-align: center;
-}
-
-/* This class name is used for both images in 'index.html' */
-.centered-image{ 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-/* Second section */
-
-.container-about h2{
-    text-align: center;
-    padding: 20px;
-    font-size: 70px;
-}
-
-.container-about p{
-    text-align: center;
-    padding: 30px;
-}
-
-.corousel-image {
-    max-width: 400px;
-    max-height: 400px;
-    margin: 0 auto; 
-}
-
-/* Login and register Form */ 
-
-.forms-heading {
-    font-size: 60px;
-    font-weight: 300;
-}
-
-.forms {
-    min-height: 100vh;
-}
-.register-image{
-    background: url("/static/images/register.jpeg");
-}
-
-.login-image{
-    background: url("/static/images/login.jpeg");
-}
-.bg-image{
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
-}
-
-.btn-forms {
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-}
-
-/* Recipes cards */
-.register-heading{
-    font-size: 90px;
-    text-align: center;
-}
-.recipe-card {
-    margin-top: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.recipe-card .btn{
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 7px 20px;
-}
-
-.recipe-card .card-img-block{
-    width: 91%;
-    margin: 0 auto;
+.title-box {
     position: relative;
-    top: -20px;
-}
-
-.recipe-card .card-img-block img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.recipe-card h5{
-    font-weight: 600;
-    text-align: center;
-}
-
-.recipe-card p{
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.recipe-card .btn-primary{
-    background-color: #4e5e30;
-    border-color: #4e5e30;
-}
-
-/*recipe_content */
-
-.position-relative {
-    position: relative;
-    height: 600px;
 }
 
 .img-fluid.w-100 {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-.position-absolute.top-50.start-50.translate-middle {
+.title-box h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-size: 100px;
+}
+
+.col-md-6 h2{
+    padding: 20px;
+    font-size: 40px;
 }
 
 .container.mt-5 {
