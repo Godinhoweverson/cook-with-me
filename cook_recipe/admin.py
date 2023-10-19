@@ -8,7 +8,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     list_display = ('title', 'created_date')
     list_filter = ('title', 'created_date')
     search_fields = ['title', 'created_date']
-    summernote_fields = ('content')
+    summernote_fields = ('content', 'content_method')
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

@@ -17,19 +17,12 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <h2>Ingredients <i class="fa-solid fa-plate-wheat"></i></h2>
-            <ul>
-                <li>400 g spaghetti</li>
-                <li>1 tbsp olive oil</li>
-                <li>200g pancetta</li>
-                <li>75g parmesan cheese</li>
-                <li>grated 4 large free-range egg yolks</li>
-                <li>beaten</li>
-            </ul>
+            <h2>Ingredients</h2>
+            <p>{{ recipe.content|safe }}</p>
         </div>
         <div class="col-md-6">
-            <h2>Method <i class="fa-solid fa-kitchen-set"></i></h2>
-            <p>1. Cook the pasta in a pot of boiling salted water until al dente. 2. While the pasta is cooking heat the oil in a frying pan over a medium heat, add the pancetta and fry for 2-3 minutes until golden and crisp. Remove and drain on a plate with kitchen paper. 3. Drain the spaghetti, reserving a little of the cooking water 4. Return the pasta to the saucepan and, working quickly, stir through the egg, pancetta and the Parmesan, reserving some of the cheese to sprinkle on top at the end. 5. When the pasta is thoroughly coated in the egg mixture, season to taste, add remaining Parmesan cheese and serve straight away.</p>
+            <h2>Method</h2>
+            <p>{{ recipe.content_method|safe }}</p>  
         </div>
     </div>
 </div>

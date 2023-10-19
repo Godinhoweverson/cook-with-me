@@ -10,6 +10,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=150, unique=True)
     created_date = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
+    content_method = models.TextField(default="Default content for method.")
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipes_likes', blank=True)
 

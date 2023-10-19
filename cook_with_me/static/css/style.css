@@ -158,6 +158,7 @@ height:70vh;
 
 .title-box {
     position: relative;
+
 }
 
 .img-fluid.w-100 {
@@ -175,6 +176,9 @@ height:70vh;
     font-size: 100px;
 }
 
+.col-md-6{
+    height: 50vh;
+}
 .col-md-6 h2{
     padding: 20px;
     font-size: 40px;
