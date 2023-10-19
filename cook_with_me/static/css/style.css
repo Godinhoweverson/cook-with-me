@@ -152,31 +152,312 @@ text-align: center;
 
 /*recipe_content */
 
-.recipe-box{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+
+.container-fluid {
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.content{
-    text-align: center;
-    padding-left: 30px;
-  
+.recipe-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
 .content h1{
-    font-family: 'Great Vibes', cursive;
-    font-size: 100px;
-
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.recipe_image {
-  
-}
+@media(max-width: 767px){
+    .recipe-box {
+        flex-direction: column;
+    }
+}@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Montserrat:wght@500&display=swap');
 
-.recipe_image img {
-    height: 100vh;
-    max-width: 100%;
+
+*{
+    margin: 0;
     padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    height: auto;
+}
+
+/* Navbar */
+.logo{  
+    font-size: 10px;
+}
+
+/* First section */
+
+.title-container {
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-title{
+text-align: center;
+}
+
+.content-title h1{
+    font-size: 150px;
+    font-family: 'Great Vibes', cursive;
+}
+.image-container{
+    text-align: center;
+}
+
+/* This class name is used for both images in 'index.html' */
+.centered-image{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Second section */
+
+.container-about h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 70px;
+}
+
+.container-about p{
+    text-align: center;
+    padding: 30px;
+}
+
+.corousel-image {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto; 
+}
+
+/* Login and register Form */ 
+
+.forms-heading {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.forms {
+    min-height: 100vh;
+}
+.register-image{
+    background: url("/static/images/register.jpeg");
+}
+
+.login-image{
+    background: url("/static/images/login.jpeg");
+}
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+
+.btn-forms {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}
+
+/* Recipes cards */
+.register-heading{
+    font-size: 90px;
+    text-align: center;
+}
+.recipe-card {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.recipe-card .btn{
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.recipe-card .card-img-block{
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+.recipe-card .card-img-block img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.recipe-card h5{
+    font-weight: 600;
+    text-align: center;
+}
+
+.recipe-card p{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.recipe-card .btn-primary{
+    background-color: #4e5e30;
+    border-color: #4e5e30;
+}
+
+/*recipe_content */
+
+.position-relative {
+    position: relative;
+    height: 600px;
+}
+
+.img-fluid.w-100 {
+    width: 100%;
+    height: auto;
+}
+
+.position-absolute.top-50.start-50.translate-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.container.mt-5 {
+    margin-top: 5rem;
+}
+
+
+/* Comments */
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mb-100{
+    margin-bottom:100px;
+}
+.card{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box
+    ;border: 0px solid transparent;
+    border-radius: 0px
+}
+
+.card-body{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card .card-title{
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.comment-widgets{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.comment-widgets .comment-row{
+    border-bottom: 1px solid transparent;
+    ;padding: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
+
+}
+
+.p-2{
+    padding: 0.5rem !important;
+
+}
+
+.comment-text{
+    padding-left: 15px;
+}
+
+.w-100{
+    
+    width: 100% !important;
+}
+
+.m-b-15{
+    margin-bottom: 15px;
+
+}
+
+.btn-sm{
+    padding: 0.25rem 0.5rem;
+    font-size: 0.76563rem;
+    line-height: 1.5;
+    border-radius: 1px
+
+}
+
+.btn-cyan{
+    color: #fff;
+    background-color: #27a9e3;
+    border-color: #27a9e3;
+}
+
+.btn-cyan:hover{
+    color: #fff;
+    background-color: #1a93ca;
+    border-color: #198bbe;
+
+}
+
+.comment-widgets .comment-row:hover{
+    background: rgba(0, 0, 0, 0.05);
 }
