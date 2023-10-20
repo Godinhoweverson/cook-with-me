@@ -21,10 +21,10 @@ from cook_recipe import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('', home, name='Home'),
-    path('recipes/', views.recipe_list, name='recipe_list'),
+    path('', home, name='home'),
+    path('recipes/', views.recipe_list, name='recipes'),
     path('recipes/<int:recipe_id>/', views.recipe_content, name='recipe_content'),
-    path('register/', register, name='Register'),
-    path('login_page/', login_page, name='Login'),
+    path('register/', register, name='register'),
+    path('login_page/', login_page, name='login_page'),
 
 ]

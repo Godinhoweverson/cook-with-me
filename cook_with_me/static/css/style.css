@@ -18,7 +18,7 @@ body {
     font-size: 10px;
 }
 
-/* First section */
+/* index.html / Home */
 
 .title-container {
     min-height: 50vh;
@@ -31,7 +31,7 @@ text-align: center;
 }
 
 .content-title h1{
-    font-size: 150px;
+    font-size: 8vw;
     font-family: 'Great Vibes', cursive;
 }
 .image-container{
@@ -44,8 +44,8 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
+    height: auto;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -287,3 +287,35 @@ height:70vh;
 .comment-widgets .comment-row:hover{
     background: rgba(0, 0, 0, 0.05);
 }
+
+
+
+/* Media queries/ Responsive */
+
+/* Index.html/ Home */
+
+/* For devices with 768px and above */
+
+@media(min-width: 768px){
+    .content-title h1{
+        font-size: 150px;
+    }
+
+    .centered-image {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* For devices with width less than 768px */
+@media(max-width: 767px) {
+    .content-title h1 {
+        font-size: 5vw;
+    }
+
+    .centered-image {
+        width: 60vw;
+        height: auto;
+    }
+}
+
