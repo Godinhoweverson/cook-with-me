@@ -17,6 +17,7 @@ body {
 /* Navbar */
 .logo{  
     font-size: 10px;
+    padding-left: 20px;
 }
 
 /* index.html / Home */
@@ -51,7 +52,19 @@ text-align: center;
 }
 
 /* Second section */
+.carousel-item {
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
 
+.corousel-image {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin: 0 auto; 
+}
 .container-about h2{
     text-align: center;
     padding: 20px;
@@ -63,11 +76,6 @@ text-align: center;
     padding: 30px;
 }
 
-.corousel-image {
-    max-width: 400px;
-    max-height: 400px;
-    margin: 0 auto; 
-}
 
 /* Login and register Form */ 
 
@@ -293,34 +301,41 @@ height:70vh;
 
 /* Media queries/ Responsive */
 
-@media only screen and (min-width: 600px){
-    body {
-        font-size: 18px;
+
+@media only screen and (min-width: 990px){
+    .corousel-image {
+        max-width: 50%;
+        height: auto;
     }
 }
 
 
 @media only screen and (min-width: 768px){
     .content-title h1 {
-        font-size: 6vw;
+        font-size: 8vw;
     }
-    .centered-image {
-        width: 60%;
-        height: auto;
+    .content-title p {
+        font-size: 14px;
     }
+
     .container-about h2 {
         font-size: 50px;
     }
     .container-about p {
-        font-size: 16px;
+        font-size: 14px;
     }
-    .corousel-image {
-        max-width: 70%;
+    .centered-image {
+        width: 35%;
         height: auto;
     }
+
 }
 
+
 @media only screen and (max-width: 576px) {
+    body {
+        font-size: 18px;
+    }
     .content-title h1 {
         font-size: 5vw;
     }
@@ -334,16 +349,12 @@ height:70vh;
     .container-about p {
         font-size: 14px;
     }
-    .corousel-image {
-        max-width: 60%;
-        height: auto;
-    }
 }
 
 /* For smaller phones */
 @media only screen and (max-width: 400px) {
     .content-title h1 {
-        font-size: 4vw;
+        font-size: 10vw;
     }
     .centered-image {
         width: 40%;
