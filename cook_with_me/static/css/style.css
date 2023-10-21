@@ -11,6 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     height: auto;
+    font-size: 16px;
 }
 
 /* Navbar */
@@ -44,8 +45,8 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    max-width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -292,30 +293,76 @@ height:70vh;
 
 /* Media queries/ Responsive */
 
-/* Index.html/ Home */
-
-/* For devices with 768px and above */
-
-@media(min-width: 768px){
-    .content-title h1{
-        font-size: 150px;
-    }
-
-    .centered-image {
-        width: 400px;
-        height: 400px;
+@media only screen and (min-width: 600px){
+    body {
+        font-size: 18px;
     }
 }
 
-/* For devices with width less than 768px */
-@media(max-width: 767px) {
-    .content-title h1 {
-        font-size: 5vw;
-    }
 
+@media only screen and (min-width: 768px){
+    .content-title h1 {
+        font-size: 6vw;
+    }
     .centered-image {
-        width: 60vw;
+        width: 60%;
+        height: auto;
+    }
+    .container-about h2 {
+        font-size: 50px;
+    }
+    .container-about p {
+        font-size: 16px;
+    }
+    .corousel-image {
+        max-width: 70%;
         height: auto;
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .content-title h1 {
+        font-size: 5vw;
+    }
+    .centered-image {
+        width: 50%;
+        height: auto;
+    }
+    .container-about h2 {
+        font-size: 40px;
+    }
+    .container-about p {
+        font-size: 14px;
+    }
+    .corousel-image {
+        max-width: 60%;
+        height: auto;
+    }
+}
+
+/* For smaller phones */
+@media only screen and (max-width: 400px) {
+    .content-title h1 {
+        font-size: 4vw;
+    }
+    .centered-image {
+        width: 40%;
+        height: auto;
+    }
+    .container-about h2 {
+        font-size: 30px;
+    }
+    .container-about p {
+        font-size: 12px;
+    }
+    .corousel-image {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+
+
+
+
 
