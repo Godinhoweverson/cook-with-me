@@ -5,17 +5,16 @@
 
 {% block content %}
 
-<div class="container-fluid box-size">
-    <div class="row box-size">
-        <div class="col-12 title-box box-size">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 title-box">
             <img src="{{ recipe.recipe_image.url }}" alt="{{ recipe.title }}" class="img-fluid w-100">
             <h1>{{ recipe.title }}</h1>
         </div>
     </div>
 </div>
 
-<div class="container mt-5">
-    <div class="row">
+<div class="container-fluid row mt-5">
         <div class="col-md-6">
             <h2>Ingredients</h2>
             <p>{{ recipe.content|safe }}</p>
@@ -24,7 +23,6 @@
             <h2>Method</h2>
             <p>{{ recipe.content_method|safe }}</p>  
         </div>
-    </div>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
     <path d="M0 50 Q 250 100 500 50 T 1000 50" fill="none" stroke="silver" stroke-width="1"></path>
@@ -32,7 +30,8 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
-            <div class="col">    <div class="row d-flex justify-content-center mt-100 mb-100">
+            <div class="col">    
+                <div class="row d-flex justify-content-center mt-100 mb-100">
                 <div class="col-md-8 col-12">
                     <div class="card">
                         <div class="card-body text-center">

@@ -160,19 +160,9 @@ text-align: center;
 }
 
 /*recipe_content */
-.box-size{
-height:70vh;
-}
-
-
 .title-box {
     position: relative;
 
-}
-
-.img-fluid.w-100 {
-    width: 100%;
-    height: 100%;
 }
 
 .title-box h1 {
@@ -182,12 +172,9 @@ height:70vh;
     transform: translate(-50%, -50%);
     color: white; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    font-size: 100px;
+    font-size: calc(1.525rem + 3.3vw);
 }
 
-.col-md-6{
-    height: 50vh;
-}
 .col-md-6 h2{
     padding: 20px;
     font-size: 40px;
