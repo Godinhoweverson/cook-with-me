@@ -3,18 +3,14 @@
 {% block title %}Cook with me{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row title-container">
-        <div class="col-lg-6 col-12 image-container">
-            <img class="centered-image" src="{% static 'images/title-image.jpeg'%}" alt="" class="centered-image">
-        </div>
-        <div class="col-lg-6 col-12 content-title">
-            <H1>Cook with me</H1>
-            <p class="blockquote-footer">By Godinho</p>
-        </div>            
-      
-    </div>
-
+<div class="container-fluid flex row">
+    <div class="col-lg-6 col-12  mx-auto mt-5 ml-5">
+         <img class="w-50 rounded-circle d-block mx-auto" src="{% static 'images/title-image.jpeg'%}" alt="">
+     </div>
+    <div class="col-lg-6 col-12 content-title d-block mx-auto mt-5 text-center">
+        <H1>Cook with me</H1>
+        <p class="blockquote-footer">By Godinho</p>
+    </div>            
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
     <path d="M0 50 Q 250 100 500 50 T 1000 50" fill="none" stroke="silver" stroke-width="1"></path>
@@ -64,4 +60,4 @@
 
 
 
-{% endblock %}
+{% endblock %}%}

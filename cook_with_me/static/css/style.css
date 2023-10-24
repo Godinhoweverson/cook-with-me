@@ -22,34 +22,13 @@ body {
 
 /* index.html / Home */
 
-.title-container {
-    min-height: 50vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-title{
-text-align: center;
-}
-
 .content-title h1{
     font-size: 8vw;
     font-family: 'Great Vibes', cursive;
 }
-.image-container{
-    text-align: center;
-}
 
-/* This class name is used for both images in 'index.html' */
-.centered-image{ 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
+
+
 
 /* Second section */
 .carousel-item {
@@ -362,9 +341,6 @@ text-align: center;
         font-size: 3vw;
     }
 }
-
-
-
 
 
 
