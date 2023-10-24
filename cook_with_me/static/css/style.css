@@ -14,12 +14,6 @@ body {
     font-size: 16px;
 }
 
-/* Navbar */
-.logo{  
-    font-size: 10px;
-    padding-left: 20px;
-}
-
 /* index.html / Home */
 
 .content-title h1{
@@ -43,8 +37,10 @@ body {
 /* Login and register Form */ 
 
 .forms-heading {
-    font-size: 60px;
+    font-size: 4vw;
     font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .forms {
@@ -60,7 +56,6 @@ body {
 .bg-image{
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 .btn-forms {
@@ -249,7 +244,13 @@ body {
 
 /* Media queries/ Responsive */
 
-/* For smaller phones */
+
+@media only screen and (max-width: 762px) {
+.forms-heading {
+    font-size: 6vw;
+}
+}
+/* For smaller phones */ 
 @media only screen and (max-width: 400px) {
    
     .title-box h1 {
@@ -261,6 +262,12 @@ body {
     }
     .container-about p{
         font-size: 14px;
+    }
+
+    /* Register and long in form */
+
+    .forms-heading {
+        font-size: 8vw;
     }
 }
 
