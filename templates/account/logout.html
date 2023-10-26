@@ -5,17 +5,71 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+<div class="container-fluid ps-md-0">
+    <div class="row g-0">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 signout-image bg-image"></div>
+        <div class="col-md-8 col-lg-6">
+            <div class="forms d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                             <h3 class="forms-heading mb-4">{% trans "Sign Out" %}</h3>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
+                             <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                                <form method="POST" action="{% url 'account_logout' %}">
+                                        <div class="form-floating mb-3">
+                                            {% csrf_token %}
+                                            {% if redirect_field_value %}
+                                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                                           
+                                            
+                                        </div>
+                                     {% endif %}
+                                 <div class="d-grid">
+                                     <button class="btn btn-lg btn-secondary btn-login text-uppercase fw-bold mb-2" type="submit">{% trans 'Sign Out' %}</button>
+                                 </div>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock content %}
+
+
+<div class="container-fluid ps-md-0">
+    <div class="row g-0">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 login-image bg-image"></div>
+        <div class="col-md-8 col-lg-6">
+            <div class="forms d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                             <h3 class="forms-heading mb-4">{% trans "Sign Out" %}</h3>
+
+                             <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                                <form method="POST" action="{% url 'account_logout' %}">
+                                        <div class="form-floating mb-3">
+                                            {% csrf_token %}
+                                            {% if redirect_field_value %}
+                                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                                           
+                                            
+                                        </div>
+                                     {% endif %}
+                                 <div class="d-grid">
+                                     <button class="btn btn-lg btn-secondary btn-login text-uppercase fw-bold mb-2" type="submit">{% trans 'Sign Out' %}</button>
+                                 </div>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

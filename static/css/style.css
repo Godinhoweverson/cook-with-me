@@ -52,6 +52,10 @@ body {
 .login-image{
     background: url("/static/images/login.jpeg");
 }
+
+.signout-image{
+    background: url("/static/images/signout.jpg");
+}
 .bg-image{
     background-size: cover;
     background-position: center;
