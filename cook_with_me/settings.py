@@ -51,8 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'widget_tweaks',
     'cook_recipe',
-    'cook_with_me'
+    'cook_with_me',   
 ]
 
 SITE_ID = 1

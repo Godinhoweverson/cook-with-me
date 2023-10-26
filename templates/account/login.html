@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n %}
-{% load account socialaccount %}
+{% load i18n account socialaccount widget_tweaks %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -19,9 +18,18 @@
                                 <form class="login" method="POST" action="{% url 'account_login' %}">
                                         <div class="form-floating mb-3">
                                             {% csrf_token %}
-                                             {{ form.as_p }}
+                                            {% for field in form %}
+                                            <p>
+                                                {{ field.label_tag }}
+                                                {% if field.field.widget.input_type != "checkbox" %}
+                                                    {{ field|add_class:"form-control" }}
+                                                {% else %}
+                                                    {{ field }}
+                                                {% endif %}
+                                            </p>
+                                            {% endfor %} 
                                             {% if redirect_field_value %}
-                                            <input type="hidden" class="form-control" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                         </div>
                                      {% endif %}
                                  <div class="d-grid">
