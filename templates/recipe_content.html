@@ -32,7 +32,7 @@
 <h3>Comments</h3>
 <ul>
     {% for comment in recipe.comment_set.all %}
-    <li>{{ comment.user }}: {{ comment.text }}</li>
+    <li>{{ comment.user }}: {{ comment.content_body }}</li>
     {% endfor %}
 </ul>
 {% if user.is_authenticated %}
