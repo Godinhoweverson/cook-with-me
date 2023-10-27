@@ -34,7 +34,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com']
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com',
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,6 +55,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'widget_tweaks',
     'cook_recipe',
+    'crispy_forms',
     'cook_with_me',   
 ]
 
@@ -61,6 +64,8 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/recipes/'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

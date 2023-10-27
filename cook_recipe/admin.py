@@ -18,7 +18,8 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ['recipe', 'user', 'created_on']
     actions =['comment_approved']
 
-    def comment_approved(self, request, queryset):
-        queryset.update(approved=True)
+    def approve_comments(self, request, queryset):
+        queryset.update(comment_approved=True)
+    approve_comments.short_description = 'Approve selected comments'
 
-# Register your models here.
+

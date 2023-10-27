@@ -13,9 +13,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 col-lg-8 mx-auto">
-                             <h3 class="forms-heading mb-4">{% trans "Sign Out" %}</h3>
+                             <h3 class="forms-heading mb-4">{% trans "Sign out" %}</h3>
 
-                             <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                             <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
                                 <form method="POST" action="{% url 'account_logout' %}">
                                         <div class="form-floating mb-3">
                                             {% csrf_token %}
@@ -26,7 +26,7 @@
                                         </div>
                                      {% endif %}
                                  <div class="d-grid">
-                                     <button class="btn btn-lg btn-secondary btn-login text-uppercase fw-bold mb-2" type="submit">{% trans 'Sign Out' %}</button>
+                                     <button class="btn btn-lg btn-secondary btn-login text-uppercase fw-bold mb-2" type="submit">{% trans 'Sign out' %}</button>
                                  </div>
                              </form>
                         </div>
