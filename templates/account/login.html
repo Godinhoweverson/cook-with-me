@@ -15,6 +15,7 @@
                     <div class="row">
                         <div class="col-md-9 col-lg-8 mx-auto">
                              <h3 class="forms-heading mb-4">{% trans "Sign In" %}</h3>
+                             <p> Wecolme to Cook with me ! If you are not registered with cook with me, please <a href="{% url 'account_signup' %}">click here</a> to sign up.</p>
                                 <form class="login" method="POST" action="{% url 'account_login' %}">
                                         <div class="form-floating mb-3">
                                             {% csrf_token %}
