@@ -37,6 +37,19 @@ def recipe_content(request, recipe_id):
     return render(request, 'recipe_content.html', {'form':form, 'recipe':recipe, 'comments': comments})
 
 
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
 
-
+    if request.user != comment.user and not request.user.is_staff:
+        return redirect('recipe_content', recipe_id=comment.recipe.id)
+    
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_content', recipe_id=comment.recipe.id)
+    else:
+        form = CommentForm(instance=comment)
+    
+    return render(request, 'edit_comment.html', {'form': form})
 

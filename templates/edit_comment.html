@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static%}
+{% load crispy_forms_tags%}
+{% block title %}Edit Comment{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Edit comments</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+       <button class="btn btn-primary btn-sm mt-5">Update Comment</button> 
+       <a href="{% url 'recipe_content' comment.recipe.id %}" class="btn btn-danger mt-3">Cancel</a>
+    </form>
+</div>
+{% endblock %}
