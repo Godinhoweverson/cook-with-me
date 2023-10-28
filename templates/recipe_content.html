@@ -39,10 +39,27 @@
                 <!-- Comment Row -->
                 <div class="d-flex flex-row comment-row m-t-0">
                     <div class="comment-text w-100">
-                        {% for comment in recipe.comment_set.all %}
-                         <h6. class="fs-4">@{{ comment.user }} <span class="text-muted float-right">{{ comment.created_on }}</span></h6> 
-                         <span class="m-b-15 d-block">{{ comment.content_body }}</span>
-                        {% endfor %}
+                        {% for comment in comments %}
+                             <h6 class="fs-4">@{{ comment.user }} <span class="text-muted float-right">{{ comment.created_on }}</span></h6>
+                             <span class="m-b-15 d-block">{{ comment.content_body }}</span>
+                        {% endfor %} 
+                        <div class="pagination">
+                            <span class="step-links">
+                                {% if comments.has_previous %}
+                                    <a href="?page=1">&laquo; first</a>
+                                    <a href="?page={{ comments.previous_page_number }}">previous</a>
+                                {% endif %}
+                        
+                                <span class="current">
+                                    Page {{ comments.number }} of {{ comments.paginator.num_pages }}.
+                                </span>
+                        
+                                {% if comments.has_next %}
+                                    <a href="?page={{ comments.next_page_number }}">next</a>
+                                    <a href="?page={{ comments.paginator.num_pages }}">last &raquo;</a>
+                                {% endif %}
+                            </span>
+                        </div>
                         {% if user.is_authenticated %}
                             <h3>Add a Comment</h3>
                             <form method="post">
@@ -53,7 +70,7 @@
                                 <button type="button" class="btn btn-danger btn-sm mt-5">Delete</button>
                             </form>
                         {% else %}
-                            <p>You must be <a href="{% url 'account_login' %}">logged in</a> to post a comment.</p>
+                            <p>You must be Logged in to post a comment <a href="{% url 'account_login' %}">click here</a> to login </p>
                         {% endif %}
                       
                     </div>
