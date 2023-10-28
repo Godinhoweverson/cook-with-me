@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
-from .models import Recipe
+from .models import Recipe, Comment
 from .forms import CommentForm
 
 
