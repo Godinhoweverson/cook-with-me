@@ -53,3 +53,15 @@ def edit_comment(request, comment_id):
     
     return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
 
+
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.user != comment.user and not request.user.is_staff:
+        return redirect('recipe_content', recipe_id=comment.recipe.id)
+    
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('recipe_content', recipe_id=comment.recipe.id)
+   
+    return render(request, 'delete_comment.html', {'comment': comment})

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static%}
+{% load crispy_forms_tags%}
+{% block title %}Delete Comment{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3>Are you sure you want to delete this comment?</h3>
+    <p>{{ comment.content_body }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="{% url 'recipe_content' comment.recipe.id %}" class="btn btn-primary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
