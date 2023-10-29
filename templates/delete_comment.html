@@ -9,8 +9,8 @@
     <p>{{ comment.content_body }}</p>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Yes, Delete</button>
-        <a href="{% url 'recipe_content' comment.recipe.id %}" class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn btn-danger btn-sm">Yes, Delete</button>
+        <a href="{% url 'recipe_content' comment.recipe.id %}" class="btn btn-primary btn-sm">Cancel</a>
     </form>
 </div>
 {% endblock %}

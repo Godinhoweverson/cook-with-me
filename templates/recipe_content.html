@@ -40,12 +40,12 @@
                 <div class="d-flex flex-row comment-row m-t-0">
                     <div class="comment-text w-100">
                         {% for comment in comments %}
-                             <h6 class="fs-4">@{{ comment.user }} <span class="text-muted float-right">{{ comment.created_on }}</span></h6>
+                             <h6 class="fs-4 mt-3">@{{ comment.user }} <span class="text-muted float-right">{{ comment.created_on }}</span></h6>
                              <span class="m-b-15 d-block">{{ comment.content_body }}</span>
                              {% if user.is_authenticated %}
                              {% if user == comment.user or user.is_staff %}
-                                 <button><a href="{% url 'edit_comment' comment.id %}" class="btn btn-primary btn-sm mt-5">Edit</a></button>
-                                 <button><a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger btn-sm mt-5">Delete</a></button>
+                                 <button><a href="{% url 'edit_comment' comment.id %}" class="btn btn-light btn-sm">Edit</a></button>
+                                 <button><a href="{% url 'delete_comment' comment.id %}" class="btn btn-light btn-sm">Delete</a></button>
                              {% endif %}
                          {% endif %}
                         {% endfor %} 
