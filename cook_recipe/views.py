@@ -51,5 +51,5 @@ def edit_comment(request, comment_id):
     else:
         form = CommentForm(instance=comment)
     
-    return render(request, 'edit_comment.html', {'form': form})
+    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
 

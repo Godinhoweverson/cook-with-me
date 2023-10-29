@@ -42,6 +42,11 @@
                         {% for comment in comments %}
                              <h6 class="fs-4">@{{ comment.user }} <span class="text-muted float-right">{{ comment.created_on }}</span></h6>
                              <span class="m-b-15 d-block">{{ comment.content_body }}</span>
+                             {% if user.is_authenticated %}
+                             {% if user == comment.user or user.is_staff %}
+                                 <button><a href="{% url 'edit_comment' comment.id %}" class="btn btn-primary btn-sm mt-5">Edit</a></button>
+                             {% endif %}
+                         {% endif %}
                         {% endfor %} 
                         <div class="pagination">
                             <span class="step-links">
@@ -66,9 +71,6 @@
                                 {% csrf_token %}
                                 {{ form|crispy }}
                                 <button type="submit" class="btn btn-success btn-sm mt-5">Publish</button>
-                                    {% if user == comment.user or user.is_staff %}
-                                        <button><a href="{% url 'edit_comment' comment.id %}" class="btn btn-primary btn-sm mt-5">Edit</a></button>
-                                    {% endif %}
                                 <button type="button" class="btn btn-danger btn-sm mt-5">Delete</button>
                             </form>
                         {% else %}
