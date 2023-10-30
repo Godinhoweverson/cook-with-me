@@ -14,8 +14,13 @@
             </div>
             <div class="card-body pt-0">
                  <h5><a href="{% url 'recipe_content' recipe.id %}">{{ recipe.title }}</a></h5>
-                 <i class="fa-regular fa-heart"></i>
-
+                 <a href="{% url 'recipe_like' recipe.id %}">
+                    {% if user in recipe.likes.all %}
+                        <i class="fa-solid fa-heart liked"></i>
+                    {% else %}
+                        <i class="fa-regular fa-heart liked"></i>
+                    {% endif %}
+                 </a> <span>{{ recipe.likes.count }}</span>
             </div>
         </div>
       </div>

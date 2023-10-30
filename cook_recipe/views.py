@@ -13,6 +13,23 @@ def recipe_list(request):
     return render(request, 'recipe.html', {'recipes': recipes})
 
 
+def recipe_like(request, recipe_id):
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+
+    if not request.user.is_authenticated:
+        return redirect('account_login')
+
+    if request.user in recipe.likes.all():
+        recipe.likes.remove(request.user)
+    else:
+        recipe.likes.add(request.user)
+    
+    referer = request.META.get('HTTP_REFERER')
+    if referer:
+        return redirect(referer)
+    else:
+        return redirect('recipe_content', recipe_id=recipe.id)
+
 def recipe_content(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
     comments = recipe.comment_set.all().order_by('-created_on')
