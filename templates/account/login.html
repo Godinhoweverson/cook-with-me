@@ -28,6 +28,11 @@
                                                     {{ field }}
                                                 {% endif %}
                                             </p>
+                                            {% if form.errors %}
+                                            <div class="alert alert-danger" role="alert">
+                                                <strong>{% trans "Error:" %}</strong> {% trans "Invalid username or password" %}
+                                            </div>
+                                            {% endif %}
                                             {% endfor %} 
                                             {% if redirect_field_value %}
                                             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
