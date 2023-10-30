@@ -23,8 +23,6 @@ class Recipe(models.Model):
 class Comment(models.Model): 
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    first_name = models.CharField(max_length=50, blank=True, null=True)
-    last_name = models.CharField(max_length=50, blank=True, null=True)
     email = models.EmailField(max_length=50, blank=True, null=True)
     content_body = models.TextField(max_length=400)
     comment_approved = models.BooleanField(default=False)
