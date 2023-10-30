@@ -29,4 +29,6 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"Comment {self.content_body} by {self.first_name or self.user.username}"
+        if self.user:
+            return f"Comment {self.content_body} by {self.user.username}"
+        return f"Comment {self.content_body} by Anonymous"

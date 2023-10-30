@@ -1,5 +1,5 @@
 from django.test import TestCase
-from cook_recipe.models import Comment
+from cook_recipe.models import Recipe, Comment
 from cook_recipe.forms import CommentForm
 
 
@@ -13,8 +13,7 @@ class CommentFormTest(TestCase):
     
 
     def test_valid_form(self):
-        recipe = Recipe.objects.create( 
-             created_date = models.DateTimeField(auto_now_add=True))
+        recipe = Recipe.objects.create(title='Test Recipe')
         data = {
             'content_body': 'This is a test comment',
             'recipe': recipe.id 
@@ -31,7 +30,15 @@ class CommentFormTest(TestCase):
 
 
     def test_form_save(self):
-        data = {'content_body': 'This is another test comment'}
+        recipe = Recipe.objects.create(title='Test Recipe')
+        data = {
+            'content_body': 'This is another test comment'
+        }
         form = CommentForm(data=data)
-        comment = form.save()
-        self.assertEqual(comment.content_body, 'This is another test comment')
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.recipe = recipe
+            comment.save()
+            self.assertEqual(comment.content_body, 'This is another test comment')
+        else:
+            self.fail('Form is not valid.')

@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from cook_recipe.models import Recipe, Comment
 
+
 class RecipeModelTest(TestCase):
 
     def setUp(self):  
@@ -58,10 +59,8 @@ class CommentModelTest(TestCase):
     def test_comment_without_user(self):
         comment_without_user = Comment.objects.create(
             recipe = self.recipe,
-            first_name = "John",
-            last_name = "Doe",
             email = "john.doe@example.com",
             content_body =  "Another test comment."
         )
-        self.assertEqual(str(comment_without_user), 'Comment Another test comment. by John')
+        self.assertEqual(str(comment_without_user), 'Comment Another test comment. by Anonymous')
 
