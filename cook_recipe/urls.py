@@ -8,4 +8,5 @@ urlpatterns = [
     path('comment/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
     path('comment/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
     path('recipe/<int:recipe_id>/like/', views.recipe_like, name='recipe_like'),
+    path('account/signup/', views.PasswordSignupView.as_view(), name='account_signup' )
 ]
