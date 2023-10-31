@@ -23,7 +23,7 @@ class PasswordSignupForm(SignupForm):
         if not any(char.islower() for char in password):
             raise forms.ValidationError("Password must contain at least one lowercase letter.")
 
-        if not any(char.isdgit() for char in password):
+        if not any(char.isdigit() for char in password):
             raise forms.ValidationError("Password must contain at least one digit.")
 
         return password

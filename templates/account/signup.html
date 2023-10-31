@@ -23,6 +23,7 @@
                                                 {{ field.label_tag }}
                                                 {% if field.field.widget.input_type != "checkbox" %}
                                                     {{ field|add_class:"form-control" }}
+                                                    {{ field.errors }}
                                                 {% else %}
                                                     {{ field }}
                                                 {% endif %}
