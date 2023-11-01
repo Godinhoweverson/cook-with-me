@@ -17,7 +17,7 @@ class RecipeViewsTest(TestCase):
 
 
     def test_recipe_list_view(self):
-        response = self.client.get(reverse('recipe_list'))
+        response = self.client.get(reverse('recipes'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recipe.html')
 
@@ -54,12 +54,12 @@ class RecipeViewsTest(TestCase):
     def test_edit_comment_view(self):
         comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
         response = self.client.get(reverse('edit_comment', args=[comment.id]))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'edit_comment.html')
+        self.assertEqual(response.status_code, 302)
+        self.assertTemplateNotUsed(response, 'edit_comment.html')
 
 
-        def test_delete_comment_view(self):
+    def test_delete_comment_view(self):
         comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
         response = self.client.get(reverse('delete_comment', args=[comment.id]))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'delete_comment.html')
+        self.assertEqual(response.status_code, 302)
+        self.assertTemplateNotUsed(response, 'delete_comment.html')
