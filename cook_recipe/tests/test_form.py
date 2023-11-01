@@ -1,7 +1,7 @@
 #Import necessary modules
 from django.test import TestCase
 from cook_recipe.models import Recipe, Comment
-from cook_recipe.forms import CommentForm
+from cook_recipe.forms import CommentForm, PasswordSignupForm
 
 # Define a test class for CommentForm
 class CommentFormTest(TestCase):

@@ -84,5 +84,6 @@ def delete_comment(request, comment_id):
    
     return render(request, 'delete_comment.html', {'comment': comment})
 
+
 class PasswordSignupView(SignupView):
     form_class= PasswordSignupForm
