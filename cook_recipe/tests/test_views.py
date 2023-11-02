@@ -106,6 +106,33 @@ class RecipeViewsTest(TestCase):
         self.assertTrue(Comment.objects.filter(id=comment_by_other_user.id).exists())  # Ensure the comment is not deleted.
 
 
+    def test_recipe_like_remove_like(self):
+        # Create a recipe that the user has already liked
+        self.recipe.likes.add(self.user)
+
+        # Log in the user
+        self.client.login(username='testuser', password='testpass123')
+
+        #test that the user's like is removed when they access the view
+        response = self.client.get(reverse('recipe_like', args=[self.recipe.id]))
+        self.assertEqual(response.status_code,302)
+        recipe = Recipe.objects.get(id=self.recipe.id)
+        self.assertFalse(self.user in recipe.likes.all())
+
+
+    def test_recipe_like_redirect_to_refered(self):
+        # Log in the user
+        self.client.login(username='testuser', password='testpass123')
+
+        # Set the HTTP_REFERER header to a custo URL
+        custom_referer = 'cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com'
+        response = self.client.get(reverse('recipe_like', args=[self.recipe.id]), HTTP_REFERER=custom_referer)
+
+        # Test that the viwe redirects to the custom referer
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, custom_referer)
+
+
 
 
 
