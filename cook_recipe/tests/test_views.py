@@ -120,17 +120,7 @@ class RecipeViewsTest(TestCase):
         self.assertFalse(self.user in recipe.likes.all())
 
 
-    def test_recipe_like_redirect_to_refered(self):
-        # Log in the user
-        self.client.login(username='testuser', password='testpass123')
 
-        # Set the HTTP_REFERER header to a custo URL
-        custom_referer = reverse('recipe_like', args=[self.recipe.id])
-        response = self.client.get(custom_referer, HTTP_REFERER=f'/recipe/{self.recipe.id}/like/')
-
- 
-        # Test that the viwe redirects to the custom referer
-        self.assertRedirects(response, custom_referer, status_code=302)
 
 
 

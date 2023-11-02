@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from cook_recipe.models import Recipe, Comment
+from django.contrib import admin
 
 class AdminTests(TestCase):
     def setUp(self):
