@@ -125,12 +125,12 @@ class RecipeViewsTest(TestCase):
         self.client.login(username='testuser', password='testpass123')
 
         # Set the HTTP_REFERER header to a custo URL
-        custom_referer = 'cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com'
-        response = self.client.get(reverse('recipe_like', args=[self.recipe.id]), HTTP_REFERER=custom_referer)
+        custom_referer = reverse('recipe_like', args=[self.recipe.id])
+        response = self.client.get(custom_referer, HTTP_REFERER=f'/recipe/{self.recipe.id}/like/')
 
+ 
         # Test that the viwe redirects to the custom referer
-        self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, custom_referer)
+        self.assertRedirects(response, custom_referer, status_code=302)
 
 
 
