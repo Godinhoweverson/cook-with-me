@@ -20,6 +20,7 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(comment_approved=True)
+        
     approve_comments.short_description = 'Approve selected comments'
 
 

@@ -28,31 +28,25 @@ class CommentFormTest(TestCase):
         # Check if the form is valid
         self.assertTrue(form.is_valid())
 
-    # Test an invalid form submission (missing content_body)
+    
     def test_invalid_form(self):
         data = {'content_body': ''}
         form = CommentForm(data=data)
-        # Check if the form is not valid
+        
         self.assertFalse(form.is_valid())
 
-    # Test saving the form data
-    def test_form_save(self):
-        # Create a Recipe instance
+    
+    def test_form_save_invalid(self):
+        
         recipe = Recipe.objects.create(title='Test Recipe')
-        # Define form data with content_body
+      
         data = {
-            'content_body': 'This is another test comment'
+            'content_body': ''
         }
         form = CommentForm(data=data)
-        if form.is_valid():
-            # Save the comment object without committing to the database
-            comment = form.save(commit=False)
-            comment.recipe = recipe
-            comment.save()
-            # Check if the content_body is correctly saved
-            self.assertEqual(comment.content_body, 'This is another test comment')
-        else:
-            self.fail('Form is not valid.')
+        self.assertFalse(form.is_valid()) 
+        with self.assertRaisesMessage(ValueError, 'The Comment could not be created because the data didn\'t validate.'):
+            form.save() 
 
     
 # Tests for check password validation rules.

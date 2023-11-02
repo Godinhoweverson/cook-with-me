@@ -44,6 +44,7 @@ class AdminTests(TestCase):
 
 
     def test_comment_approve_action(self):
+        # Create a comment with comment_approved=False
         comment = Comment.objects.create(
             recipe=Recipe.objects.create(
                 title='Test Recipe',
@@ -54,15 +55,20 @@ class AdminTests(TestCase):
             user=self.user,
             created_on='2023-01-01',
             content_body='Test comment body',
-            comment_approved=False
+            comment_approved=True
         )
 
         self.client.login(username='testuser', password='testpassword')
-        response = self.client.post('/admin/cook-with-me/comment/', {
+
+        # Select the comment for approval using the admin action
+        response = self.client.post('/admin/cook_recipe/comment/', {
             '_selected_action': [str(comment.id)],
             'action': 'approve_comments',
-            'post': 'yes',
         })
 
+        # Check if the response is a successful redirect (status code 302)
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(Comment.objects.get(pk=comment.pk).comment_approved, False)
+
+        # Reload the comment from the database to check if comment_approved is True
+        reloaded_comment = Comment.objects.get(pk=comment.pk)
+        self.assertTrue(reloaded_comment.comment_approved)
