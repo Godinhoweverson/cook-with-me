@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cook_recipe.models import Recipe, Comment
 from django.contrib import admin
 
+
 class AdminTests(TestCase):
     def setUp(self):
         # Create a user for testing
@@ -23,7 +24,6 @@ class AdminTests(TestCase):
         response = self.client.get('/admin/cook-recipe/recipe/')
         self.assertEqual(response.status_code, 302)
 
-
     def test_comment_admin(self):
         comment = Comment.objects.create(
             recipe=Recipe.objects.create(
@@ -42,8 +42,7 @@ class AdminTests(TestCase):
         response = self.client.get('/admin/cook_recipe/comment/')
         self.assertEqual(response.status_code, 302)
 
-
-    def test_comment_approve_action(self):
+    def test_approve_comments(self):
         # Create a comment with comment_approved=False
         comment = Comment.objects.create(
             recipe=Recipe.objects.create(
@@ -58,12 +57,13 @@ class AdminTests(TestCase):
             comment_approved=True
         )
 
+        # Log in as the test user
         self.client.login(username='testuser', password='testpassword')
 
         # Select the comment for approval using the admin action
         response = self.client.post('/admin/cook_recipe/comment/', {
             '_selected_action': [str(comment.id)],
-            'action': 'approve_comments',
+            'action': 'comment_approved',
         })
 
         # Check if the response is a successful redirect (status code 302)
