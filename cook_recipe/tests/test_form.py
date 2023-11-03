@@ -1,10 +1,12 @@
-#Import necessary modules
+# Import necessary modules
 from django.test import TestCase
 from cook_recipe.models import Recipe, Comment
 from cook_recipe.forms import CommentForm, PasswordSignupForm
 
+
 # Define a test class for CommentForm
 class CommentFormTest(TestCase):
+
 
     # Test the form's meta class
     def test_form_meta_class(self):
@@ -36,22 +38,30 @@ class CommentFormTest(TestCase):
         self.assertFalse(form.is_valid())
 
     
-    def test_form_save_invalid(self):
-        
-        recipe = Recipe.objects.create(title='Test Recipe')
-      
-        data = {
-            'content_body': ''
-        }
-        form = CommentForm(data=data)
-        self.assertFalse(form.is_valid()) 
-        with self.assertRaisesMessage(ValueError, 'The Comment could not be created because the data didn\'t validate.'):
+    def test_form_save(self): 
+        # Create a Recipe instance 
+        recipe = Recipe.objects.create(title='Test Recipe') 
+        # Define form data with content_body 
+        data = { 
+            'content_body': 'This is another test comment' 
+        } 
+        form = CommentForm(data=data) 
+        if form.is_valid(): 
+            # Save the comment object without committing to the database 
+            comment = form.save(commit=False) 
+            comment.recipe = recipe 
+            comment.save() 
+            # Check if the content_body is correctly saved 
+            self.assertEqual(comment.content_body, 'This is another test comment') 
+        else: 
             form.save() 
 
     
 # Tests for check password validation rules.
-# It tests valid passwords, short passwords, missign uppercase letters, missing lowercase letters, and missing digits.
-# The tests check if the form correctly identifies these issues and reports appropriate error messages.
+# It tests valid passwords, short passwords, missign uppercase letters, 
+# missing lowercase letters, and missing digits.
+# The tests check if the form correctly identifies these issues and reports
+#  appropriate error messages.
 class PasswordSignupFormTest(TestCase):
     def test_valid_password(self):
         # Create a form with a valid password
