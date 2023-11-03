@@ -156,15 +156,13 @@ class RecipeViewsTest(TestCase):
         comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
 
         other_user = User.objects.create_user(username='otheruser', password='otherpass123')
-        comment_by_other_user = Comment.objects.create(recipe=self.recipe, user=other_user, content_body='Other user comment')
-
         self.client.login(username='otheruser', password='otherpass123')
 
-
         # Test the case where the user is not allowed to delete the comment (e.g., different user).
-        response = self.client.post(reverse('delete_comment', args=[comment_by_other_user.id]))
-        self.assertEqual(response.status_code, 302)
-        self.assertTrue(Comment.objects.filter(id=comment_by_other_user.id).exists())  # Ensure the comment is not deleted
+        response = self.client.post(reverse('delete_comment', args=[comment.id]))
+        self.assertEqual(response.status_code, 302)  # Ensure the response is a redirect
+        comment.refresh_from_db()
+        self.assertTrue(Comment.objects.filter(id=comment.id).exists()) # Ensure the comment is not deleted
 
 
     def test_recipe_like_remove_like(self):
