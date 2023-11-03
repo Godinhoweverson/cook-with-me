@@ -39,6 +39,10 @@ class RecipeViewsTest(TestCase):
         response = self.client.get(reverse('recipe_content', args=[self.recipe.id]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recipe_content.html')
+
+    def test_recipe_content_view_form_invalid(self):
+        response = self.client.post(reverse('recipe_content', args=[self.recipe.id]), {})  # Missing form data
+        self.assertEqual(response.status_code, 302)
     
 
     def test_recipe_like_view(self):
@@ -82,6 +86,35 @@ class RecipeViewsTest(TestCase):
         self.client.login(username='otheruser', password='otherpass123')
         response = self.client.post(reverse('edit_comment', args=[comment.id]), form_data)
         self.assertEqual(response.status_code, 302)
+    
+
+    def test_edit_comment_view_user_allowed_to_edit(self):
+        # Create a comment by the user
+        comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
+
+        self.client.login(username='testuser', password='testpass123')
+
+        # Test the case where the user is allowed to edit the comment.
+        form_data = {'content_body': 'Updated comment content'}
+        response = self.client.post(reverse('edit_comment', args=[comment.id]), form_data)
+        self.assertEqual(response.status_code, 302)
+        updated_comment = Comment.objects.get(id=comment.id)
+        self.assertEqual(updated_comment.content_body, 'Updated comment content') 
+
+
+    def test_edit_comment_view_user_not_allowed_to_edit(self):
+        # Create a comment by the user
+        comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
+
+        other_user = User.objects.create_user(username='otheruser', password='otherpass123')
+        self.client.login(username='otheruser', password='otherpass123')
+
+        # Test the case where the user is not allowed to edit the comment (e.g., different user).
+        form_data = {'content_body': 'Updated comment content'}
+        response = self.client.post(reverse('edit_comment', args=[comment.id]), form_data)
+        self.assertEqual(response.status_code, 302)
+        comment.refresh_from_db()
+        self.assertNotEqual(comment.content_body, 'Updated comment content')
 
 
     def test_delete_comment_view(self):
@@ -104,6 +137,34 @@ class RecipeViewsTest(TestCase):
         response = self.client.post(reverse('delete_comment', args=[comment_by_other_user.id]))
         self.assertEqual(response.status_code, 302)
         self.assertTrue(Comment.objects.filter(id=comment_by_other_user.id).exists())  # Ensure the comment is not deleted.
+
+
+    def test_delete_comment_view_user_allowed_to_delete(self):
+        # Create a comment by the user
+        comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
+
+        self.client.login(username='testuser', password='testpass123')
+
+        # Test the case where the user is allowed to delete the comment.
+        response = self.client.post(reverse('delete_comment', args=[comment.id]))
+        self.assertEqual(response.status_code, 302)
+        self.assertFalse(Comment.objects.filter(id=comment.id).exists())  # Ensure the comment is deleted
+
+
+    def test_delete_comment_view_user_not_allowed_to_delete(self):
+        # Create a comment by the user
+        comment = Comment.objects.create(recipe=self.recipe, user=self.user, content_body='Test comment')
+
+        other_user = User.objects.create_user(username='otheruser', password='otherpass123')
+        comment_by_other_user = Comment.objects.create(recipe=self.recipe, user=other_user, content_body='Other user comment')
+
+        self.client.login(username='otheruser', password='otherpass123')
+
+
+        # Test the case where the user is not allowed to delete the comment (e.g., different user).
+        response = self.client.post(reverse('delete_comment', args=[comment_by_other_user.id]))
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(Comment.objects.filter(id=comment_by_other_user.id).exists())  # Ensure the comment is not deleted
 
 
     def test_recipe_like_remove_like(self):
