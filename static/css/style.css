@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Montserrat:wght@500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    height: auto;
-    font-size: 16px;
+    font-size: 16px;   
 }
 
 /* index.html / Home */
@@ -21,6 +24,7 @@ body {
 }
 
 /* Second section */
+
 .container-about h2{
     text-align: center;
     padding: 20px;
@@ -83,6 +87,7 @@ body {
     margin-top: 50px;
     margin-left: 40px;
     margin-right: 40px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .recipe-card .card-img-block{
@@ -196,7 +201,7 @@ body {
 
 .comment-widgets .comment-row{
     border-bottom: 1px solid transparent;
-    ;padding: 14px;
+    padding: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -239,6 +244,10 @@ font-size: 15px;
     text-decoration: none; 
     text-align: center;
 }
+
+.step-links{
+padding: 15px;
+}
 /* Media queries/ Responsive */
 
 
@@ -258,7 +267,7 @@ font-size: 15px;
         font-size: 20px;
     }
     .container-about p{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* Register and long in form */

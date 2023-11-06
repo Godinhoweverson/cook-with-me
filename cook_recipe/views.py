@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Recipe, Comment
-from .forms import CommentForm, PasswordSignupForm
+from .forms import CommentForm
 from django.core.paginator import Paginator
 from allauth.account.views import SignupView
 
@@ -83,7 +83,3 @@ def delete_comment(request, comment_id):
         return redirect('recipe_content', recipe_id=comment.recipe.id)
    
     return render(request, 'delete_comment.html', {'comment': comment})
-
-
-class PasswordSignupView(SignupView):
-    form_class= PasswordSignupForm
