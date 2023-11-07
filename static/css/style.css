@@ -50,15 +50,15 @@ body {
     min-height: 100vh;
 }
 .register-image{
-    background: url("../../images/register.jpeg");
+    background: url("/static/images/register.jpeg");
 }
 
 .login-image{
-    background: url("../../images/login.jpeg");
+    background: url("/static/images/login.jpeg");
 }
 
 .signout-image{
-    background: url("../../images/signout.jpg");
+    background: url("/static/images/signout.jpg");
 }
 .bg-image{
     background-size: cover;
