@@ -36,7 +36,7 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
-ALLOWED_HOSTS = ['cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['cook-with-me-0c33f788a701.herokuapp.com', 'localhost', '8000-godinhoweverson-cook-wit-n7okavgzj5.us2.codeanyapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-godinhoweverson-cook-wit-ytgsz655q0.us2.codeanyapp.com',
@@ -53,8 +53,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'django_summernote',
     'widget_tweaks',
