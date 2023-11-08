@@ -50,7 +50,7 @@ body {
     min-height: 100vh;
 }
 .register-image{
-     background: url("/static/images/register.jpeg");
+     background: url("/static/images/title-image.jpeg");
 }
 
 .login-image{
