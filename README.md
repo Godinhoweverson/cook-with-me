@@ -1,110 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Cook with me
 
-Welcome USER_NAME,
+Welcome to Cook with Me, a delightful culinary journey where the art of cooking meets the joy of sharing. This website is dedicated to bringing the magic of recipes to your fingertips, allowing you to explore, create, and connect with fellow food enthusiasts. Whether you're a seasoned chef or a kitchen novice, there's something for everyone in our vibrant community.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="images/readme/responsive.png" alt="responsive">
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+  ***TABLE OF CONTENTS***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## UX Design 
+Welcome to Cook with Me, a platform designed with a user-centric approach to enhance your culinary experience. Our UX design prioritizes simplicity, accessibility, and an immersive culinary journey for both seasoned chefs and cooking enthusiasts. Below, we'll delve into key aspects of our UX design.
 
-A blue button should appear to click: _Make Public_,
+### Intuitive Navigation
+Cook with Me boasts an intuitive navigation system, ensuring that users can seamlessly explore recipes and features. The navigation bar, prominently positioned at the top, provides easy access to essential sections such as Home, Recipes, and User Authentication. Users can effortlessly find what they're looking for, making the overall experience smooth and enjoyable.
 
-Another blue button should appear to click: _Open Browser_.
+### User Authentication
+The website offers a personalized experience through user authentication. By creating an account, users unlock additional features such as liking recipes, leaving comments, and saving favorite recipes. The authentication process is straightforward, encouraging users to become an integral part of the Cook with Me community.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Responsive Design
+Cook with Me is designed to be responsive, ensuring a consistent and visually appealing experience across various devices. Whether you're accessing the platform from a desktop, tablet, or smartphone, the layout adapts seamlessly to provide an optimal viewing and interaction experience.
 
-A blue button should appear to click: _Make Public_,
+### Engaging Visuals
+Visual appeal is at the heart of Cook with Me. From stunning recipe images to an inviting layout, the platform leverages visuals to captivate users. The use of images in recipe cards and the home page carousel enhances the overall aesthetic, creating an enticing atmosphere for users to explore.
 
-Another blue button should appear to click: _Open Browser_.
+### Community Interaction
+The UX design encourages community interaction through comments and engagement with other users. The comment section beneath recipes facilitates discussions, sharing experiences, and creating a sense of connection among users who share a passion for cooking.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Project Strategy
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Overview
+This project follows a structured strategy based on the MoSCoW prioritization framework. The project management and development progress are tracked using the GitHub Projects Kanban Board. This board serves as a visual representation of tasks and their current status, providing transparency and facilitating efficient collaboration.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<img src="images/readme/strategyboard.png" alt="responsive">
 
-------
+## Project Sections
 
-## Release History
+### Initial Setup
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Django Libraries, Project, and App Setup
+- Ensure you have the necessary Django libraries installed
+- Early Deployment on Heroku
+- Bring Cook with Me to life by deploying an early version on Heroku. 
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Intuitive Web Navigation
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- As a user, I want a clear and intuitive navigation system on the website, So that I can easily find the sections for recipes, login, register, and logout.
+- As a user, I want to view a recipes option, So that I can easily find the recipe that I'm looking for.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### User Register, Login, and Logout
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- As a user, I want to create a registration account, So that I can comment, edit, delete, and like recipes.
+- As a user, I want to be able to log into the website, So that I can interact with the posts.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### CRUD Operations (Create, Update, Delete) and Likes
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- As a user,I want to create comments, So that I can give feedback about recipes.
+- As a user, I want to edit my comments, So that I can correct mistakes or change my opinion.
+- As a user, I want to delete my comments, so that I can remove unwanted content.
+- As a user, I want to give likes to the recipes, So that I can show my appreciation for the content.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Admin Moderation
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- As an admin, I want to post recipes, So that users can enjoy and engage with the content.
+- As an admin, I want to manage and approve the comments, So that I can prevent unwanted content from being displayed.
