@@ -2,7 +2,7 @@
 
 Welcome to Cook with Me, a delightful culinary journey where the art of cooking meets the joy of sharing. This website is dedicated to bringing the magic of recipes to your fingertips, allowing you to explore, create, and connect with fellow food enthusiasts. Whether you're a seasoned chef or a kitchen novice, there's something for everyone in our vibrant community.
 
-<img src="../images/readme/responsive.png" alt="responsive">
+![responsive](/static/images/readme/responsive.png)
 
 
   ***TABLE OF CONTENTS***
@@ -32,7 +32,7 @@ The UX design encourages community interaction through comments and engagement w
 ### Overview
 This project follows a structured strategy based on the MoSCoW prioritization framework. The project management and development progress are tracked using the GitHub Projects Kanban Board. This board serves as a visual representation of tasks and their current status, providing transparency and facilitating efficient collaboration.
 
-<img src="images/readme/strategyboard.png" alt="responsive">
+![Kanban Board](/static/images/readme/strategyboard.png)
 
 ## Project Sections
 
@@ -129,9 +129,16 @@ In a digital landscape cluttered with culinary information, "Cook with Me" stand
 
 ![Wireframes](/static/images/readme/home-mobile.png)
 ![Wireframes](/static/images/readme/recipes-mobile.png)
-![Wireframes](/static/images/readme/recipe_content-mobile.png)
+![Wireframes](/static/images/readme/recipes-content-mobile.png)
 ![Wireframes](/static/images/readme/login-mobile.png)
 ![Wireframes](/static/images/readme/signup-mobile.png)
 ![Wireframes](/static/images/readme/signout-mobile.png)
+
+</details>
+
+<details>
+<summary><strong>Flowchart logic</strong></summary>
+
+![Wireframes](/static/images/readme/flowchart.png)
 
 </details>
