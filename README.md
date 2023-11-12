@@ -4,9 +4,19 @@ Welcome to Cook with Me, a delightful culinary journey where the art of cooking 
 
 ![responsive](/static/images/readme/responsive.png)
 
+## Table Of Contents
 
-  ***TABLE OF CONTENTS***
-
+1. [UX Design](#ux-design)
+2. [Project Strategy](#project-strategy)
+3. [Project Sections](#project-sections)
+4. [Scope](#scope)
+5. [Features](#features)
+7. [Testing](#testing)
+8. [Technologies and Languages](#technologies-and-languages)
+9. [Frameworks and Libraries](#frameworks-and-libraries)
+10. [Project Dependencies](#project-dependencies)
+11. [Deployment](#deployment)
+12. [Credits & Acknowledgements](#credits--acknowledgements)
 
 ## UX Design 
 Welcome to Cook with Me, a platform designed with a user-centric approach to enhance your culinary experience. Our UX design prioritizes simplicity, accessibility, and an immersive culinary journey for both seasoned chefs and cooking enthusiasts. Below, we'll delve into key aspects of our UX design.
@@ -356,7 +366,7 @@ The application incorporates Django Allauth for seamless user authentication. Th
 
 ## Admin Panel Access
 
-For administrative purposes, an admin panel is accessible through this link. Access is restricted to authorized administrators or superusers. To log in, use your assigned username and password.
+For administrative purposes, an admin panel is accessible through [this link](https://cook-with-me-0c33f788a701.herokuapp.com/admin/login/?next=/admin/). Access is restricted to authorized administrators or superusers. To log in, use your assigned username and password.
 
 ### Admin Capabilities:
 
@@ -410,6 +420,46 @@ While the current version of the project offers essential functionalities, I hav
 
 #### JavaScript:
 - Used for adding interactive and dynamic features to the user interface.
+
+### Technologies
+
+- [Code Anywhere](https://codeanywhere.com/) Used for coding and managing application files, facilitating seamless collaboration between the code editor and the repository.
+
+- [GitHub](https://github.com/) Utilized for storing and version controlling the project, allowing for efficient collaboration, code sharing, and project management.
+
+- [MockFlow](https://www.mockflow.com/) Used for creating database diagrams and flowcharts, aiding in the visual representation and planning of the project's structure.
+
+- [Google Fonts](https://fonts.google.com/) Employed for styling text elements on the website, providing a diverse range of free and open-source fonts for enhanced typography.
+
+- [Font Awesome](https://fontawesome.com/) Utilized for incorporating icons into the site, adding visually appealing and meaningful graphical elements.
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) Applied for creating responsive design images, allowing you to visualize how the website appears across various devices and screen sizes.
+
+- [Chatgpt](https://openai.com/blog/chatgpt) Utilized to generate all written content, leveraging advanced natural language processing capabilities to create dynamic and interactive text throughout the application.
+
+- [Vs code](https://code.visualstudio.com/) Utilized as the primary integrated development environment (IDE) for coding and managing project files, providing powerful features for efficient development.
+
+- [Git](https://git-scm.com/) used for version control. (git add, git commit, git push)
+
+- [Google Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) Used for website performance and SEO audits, providing insights into improving the overall quality and user experience of the site.
+
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) Leveraged for debugging, profiling, and analyzing the performance of web applications during development.
+
+- [W3C HTML Validator](https://validator.w3.org/) Applied for validating HTML code against W3C standards, ensuring adherence to best practices and promoting cross-browser compatibility.
+
+- [W3C CSS Validator](https://css-validator.org/) Utilized for validating Cascading Style Sheets (CSS) code, ensuring compliance with W3C standards for consistent styling.
+
+- [Wave Accessibility Tool](https://wave.webaim.org/) Employed for evaluating and enhancing website accessibility, providing insights and recommendations for creating a more inclusive web experience.
+
+- [CI Python PEP8 Checker](https://pep8ci.herokuapp.com/) Implemented for continuous integration to check Python code against the PEP 8 style guide, promoting consistent and readable code.
+
+- [Cloudinary](https://www.cloudimage.io/) Utilized for cloud-based image and video management, offering efficient storage, optimization, and delivery of media assets.
+
+- [PostgreSQL](https://www.postgresql.org/) Chosen as the relational database management system (RDBMS) for storing and managing structured data within the application.
+
+- [ElephantSQL](https://www.elephantsql.com/) Utilized as a hosted PostgreSQL service, simplifying database management and deployment.
+
+- [Heroku](https://heroku.com) Deployed for hosting the web application, providing a cloud platform for easy application deployment, scaling, and management.
 
 ## Frameworks and Libraries
 
@@ -581,12 +631,17 @@ python3 manage.py migrate
 python3 manage.py runserver
 
 
-## Credits
+## Credits & Acknowledgements
 
-### Recipe Content and Images
+- Recipe Content and Images
 All recipe content and images featured on this website are attributed to the culinary expertise of Gordon Ramsay. As a superfan and dedicated follower of his work, I am honored to showcase his exceptional recipes and delicious creations. Gordon Ramsay's influence on the culinary world has been a source of inspiration, and this project serves as a tribute to his remarkable contributions to the world of gastronomy.
 
 I express my sincere gratitude to Gordon Ramsay for sharing his passion for food and cooking, making it possible for enthusiasts like me to enjoy and learn from his expertise.
 
 Note: This project is created for educational and non-commercial purposes, and all credits for the recipes and images go to Gordon Ramsay.
 
+- This website was built by following the walkthrough project Django Blog by Code Institute.
+- Tips about Django and Python by the [Pythonando](https://www.youtube.com/@pythonando) channel on YouTube.
+- Special thanks to [CFB Cursos](https://www.youtube.com/@cfbcursos) for valuable tips in Bootstrap
+- I would like to express my gratitude to Narender Singh Mentor for providing valuable guidance and tips to improve my project.
+- I extend my heartfelt thanks to my wife, Deborah, for her unwavering support and encouragement throughout the duration of this project.

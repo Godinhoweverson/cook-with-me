@@ -69,6 +69,7 @@ class AdminTests(TestCase):
         # Check if the response is a successful redirect (status code 302)
         self.assertEqual(response.status_code, 302)
 
-        # Reload the comment from the database to check if comment_approved is True
+        # Reload the comment from the database
+        # to check if comment_approved is True
         reloaded_comment = Comment.objects.get(pk=comment.pk)
         self.assertTrue(reloaded_comment.comment_approved)
