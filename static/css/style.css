@@ -1,3 +1,5 @@
+{% load static %}
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Montserrat:wght@500&display=swap');
 
 * {
@@ -50,15 +52,15 @@ body {
     min-height: 100vh;
 }
 .register-image{
-    background: url("../images/register.jpeg");
+    background: url("{% static './images/register.jpeg' %}");
 }
 
 .login-image{
-    background: url("../images/login.jpeg");
+    background: url("{% static './images/login.jpeg' %}");
 }
 
 .signout-image{
-    background: url("../images/signout.jpg");
+    background: url("{% static './images/signout.jpg' %}");
 }
 .bg-image{
     background-size: cover;
