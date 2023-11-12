@@ -9,6 +9,7 @@ from allauth.account.views import SignupView
 def home(request):
     return render(request, 'index.html')
 
+
 def recipe_list(request):
     recipes = Recipe.objects.all()
     return render(request, 'recipe.html', {'recipes': recipes})
@@ -24,17 +25,18 @@ def recipe_like(request, recipe_id):
         recipe.likes.remove(request.user)
     else:
         recipe.likes.add(request.user)
-    
+
     referer = request.META.get('HTTP_REFERER')
     if referer:
         return redirect(referer)
     else:
         return redirect('recipe_content', recipe_id=recipe.id)
 
+
 def recipe_content(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
     comments = recipe.comment_set.all().order_by('-created_on')
-    paginator = Paginator(comments, 4) # Show 4 comments per page
+    paginator = Paginator(comments, 4)  # Show 4 comments per page
 
     page = request.GET.get('page')
     comments = paginator.get_page(page)
@@ -42,7 +44,7 @@ def recipe_content(request, recipe_id):
     form = CommentForm()
 
     if request.method == "POST":
-        if request.user.is_authenticated:  
+        if request.user.is_authenticated:
             form = CommentForm(request.POST)
             if form.is_valid():
                 comment = form.save(commit=False)
@@ -52,7 +54,9 @@ def recipe_content(request, recipe_id):
                 return redirect('recipe_content', recipe_id=recipe.id)
         else:
             return redirect('account_login')
-    return render(request, 'recipe_content.html', {'form':form, 'recipe':recipe, 'comments': comments})
+    return render(request,
+                  'recipe_content.html',
+                  {'form': form, 'recipe': recipe, 'comments': comments})
 
 
 def edit_comment(request, comment_id):
@@ -60,7 +64,7 @@ def edit_comment(request, comment_id):
 
     if request.user != comment.user and not request.user.is_staff:
         return redirect('recipe_content', recipe_id=comment.recipe.id)
-    
+
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
@@ -68,8 +72,9 @@ def edit_comment(request, comment_id):
             return redirect('recipe_content', recipe_id=comment.recipe.id)
     else:
         form = CommentForm(instance=comment)
-    
-    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+
+    return render(request,
+                  'edit_comment.html', {'form': form, 'comment': comment})
 
 
 def delete_comment(request, comment_id):
@@ -77,9 +82,9 @@ def delete_comment(request, comment_id):
 
     if request.user != comment.user and not request.user.is_staff:
         return redirect('recipe_content', recipe_id=comment.recipe.id)
-    
+
     if request.method == 'POST':
         comment.delete()
         return redirect('recipe_content', recipe_id=comment.recipe.id)
-   
+
     return render(request, 'delete_comment.html', {'comment': comment})
