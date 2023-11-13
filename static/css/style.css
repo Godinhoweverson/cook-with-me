@@ -50,23 +50,6 @@ body {
     min-height: 100vh;
 }
 
-/* .register-image{
-    background: url("../images/register.jpeg");
-}
-
-.login-image{
-    background: url("../images/login.jpeg");
-}
-
-.signout-image{
-    background: url("../images/signout.jpg");
-} */
-
-.bg-image{
-    background-size: cover;
-    background-position: center;
-}
-
 .btn-forms {
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
@@ -252,6 +235,11 @@ padding: 15px;
 }
 /* Media queries/ Responsive */
 
+@media (max-width: 991px) {
+    .exclude-image {
+      display: none;
+    }
+  }
 
 @media only screen and (max-width: 762px) {
 .forms-heading {
