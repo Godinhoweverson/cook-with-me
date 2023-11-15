@@ -5,14 +5,20 @@ from .forms import CommentForm
 from django.core.paginator import Paginator
 from allauth.account.views import SignupView
 
+def check_server_error(request):
+    pass
+
+def error_500(request):
+    return render(request, '500.html')
+
 
 def home(request):
     return render(request, 'index.html')
 
-
 def recipe_list(request):
     recipes = Recipe.objects.all()
     return render(request, 'recipe.html', {'recipes': recipes})
+ 
 
 
 def recipe_like(request, recipe_id):
@@ -88,3 +94,4 @@ def delete_comment(request, comment_id):
         return redirect('recipe_content', recipe_id=comment.recipe.id)
 
     return render(request, 'delete_comment.html', {'comment': comment})
+

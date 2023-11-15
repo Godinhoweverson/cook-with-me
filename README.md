@@ -25,7 +25,7 @@ Welcome to Cook with Me, a platform designed with a user-centric approach to enh
 Cook with Me boasts an intuitive navigation system, ensuring that users can seamlessly explore recipes and features. The navigation bar, prominently positioned at the top, provides easy access to essential sections such as Home, Recipes, and User Authentication. Users can effortlessly find what they're looking for, making the overall experience smooth and enjoyable.
 
 ### User Authentication
-The website offers a personalized experience through user authentication. By creating an account, users unlock additional features such as liking recipes, leaving comments, and saving favorite recipes. The authentication process is straightforward, encouraging users to become an integral part of the Cook with Me community.
+The website offers a personalized experience through user authentication. By creating an account, users unlock additional features such as liking recipes, leaving comments. The authentication process is straightforward, encouraging users to become an integral part of the Cook with Me community.
 
 ### Responsive Design
 Cook with Me is designed to be responsive, ensuring a consistent and visually appealing experience across various devices. Whether you're accessing the platform from a desktop, tablet, or smartphone, the layout adapts seamlessly to provide an optimal viewing and interaction experience.
@@ -421,6 +421,9 @@ While the current version of the project offers essential functionalities, I hav
 #### JavaScript:
 - Used for adding interactive and dynamic features to the user interface.
 
+#### Python:
+- The primary backend language, enabling server-side logic and data processing.
+
 ### Technologies
 
 - [Code Anywhere](https://codeanywhere.com/) Used for coding and managing application files, facilitating seamless collaboration between the code editor and the repository.
@@ -465,9 +468,6 @@ While the current version of the project offers essential functionalities, I hav
 
 #### Bootstrap:
 - Employed for responsive and mobile-first design, facilitating a consistent and appealing user experience across various devices.
-
-#### Python:
-- The primary backend language, enabling server-side logic and data processing.
 
 #### Django:
 - A high-level Python web framework utilized for building robust and scalable web applications.
