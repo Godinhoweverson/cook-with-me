@@ -4,12 +4,7 @@ from .models import Recipe, Comment
 from .forms import CommentForm
 from django.core.paginator import Paginator
 from allauth.account.views import SignupView
-
-def check_server_error(request):
-    pass
-
-def error_500(request):
-    return render(request, '500.html')
+from django.core.exceptions import PermissionDenied
 
 
 def home(request):
@@ -18,8 +13,6 @@ def home(request):
 def recipe_list(request):
     recipes = Recipe.objects.all()
     return render(request, 'recipe.html', {'recipes': recipes})
- 
-
 
 def recipe_like(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)
@@ -95,3 +88,14 @@ def delete_comment(request, comment_id):
 
     return render(request, 'delete_comment.html', {'comment': comment})
 
+def check_server_error(request):
+    pass
+
+def error_500(request):
+    return render(request, '500.html', status=500)
+
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
+
+def handler403(request, exception):
+    return render(request, '403.html', status=403)
