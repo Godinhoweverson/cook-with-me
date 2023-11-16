@@ -385,9 +385,40 @@ This secure admin area ensures that the platform is well-maintained and content 
 
 ![admin](/static/images/readme/admin.jpg)
 
+</details>
 
+## Error Pages (403, 404, 500)
+
+Custom error pages have been integrated to maintain the site's consistent look and feel in the following scenarios:
+
+- When a user attempts to access a page that doesn't exist.
+- When a user attempts to access a page for which they don't have the necessary permissions.
+- In the event of a server error.
+
+Each of these error pages includes a convenient link allowing users to easily return to the Home page. This ensures a seamless and user-friendly experience even when unexpected errors occur.
+
+<details>
+<summary><strong>403</strong></summary>
+
+![admin](/static/images/readme/403-test.jpg)
 
 </details>
+
+<details>
+<summary><strong>404</strong></summary>
+
+![admin](/static/images/readme/404-test.jpg)
+
+</details>
+
+<details>
+<summary><strong>500</strong></summary>
+
+![admin](/static/images/readme/500-test.jpg)
+
+</details>
+
+
 
 ## Future Features
 
@@ -406,7 +437,9 @@ While the current version of the project offers essential functionalities, I hav
    - Allow users to share their favorite recipes on social media platforms, increasing the project's visibility.
 
 ## Testing
-###############################
+
+The full testing documentation can be found in [TESTING.md](TESTING.md)
+
 
 ## Technologies and Languages
 

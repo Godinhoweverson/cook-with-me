@@ -239,12 +239,16 @@ padding: 15px;
     .exclude-image {
       display: none;
     }
+   
   }
 
 @media only screen and (max-width: 762px) {
 .forms-heading {
     font-size: 6vw;
 }
+.exclude-image {
+    display: none;
+  }
 }
 /* For smaller phones */ 
 @media only screen and (max-width: 400px) {
