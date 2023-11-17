@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from cook_recipe.models import Recipe, Comment
 from cook_recipe.forms import CommentForm
-
+from urllib.parse import quote, urlencode
 
 class RecipeViewsTest(TestCase):
     def setUp(self):
@@ -221,9 +221,12 @@ class RecipeViewsTest(TestCase):
         # Log in the user
         self.client.login(username='testuser', password='testpass123')
 
-        # est that the user's like is removed when they access the view
-        response = self.client.get(reverse(
-            'recipe_like', args=[self.recipe.id]))
+        # Test that the user's like is removed when they access the view
+        response = self.client.get(reverse('recipe_like', args=[self.recipe.id]))
         self.assertEqual(response.status_code, 302)
-        recipe = Recipe.objects.get(id=self.recipe.id)
-        self.assertFalse(self.user in recipe.likes.all())
+
+        # Reload the recipe from the database
+        updated_recipe = Recipe.objects.get(id=self.recipe.id)
+
+        # Assert that the user's like is removed
+        self.assertFalse(self.user in updated_recipe.likes.all())

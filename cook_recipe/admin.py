@@ -22,7 +22,7 @@ class CommentAdmin(admin.ModelAdmin):
     actions = ['comment_approved']
 
     def approve_comments(self, request, queryset):
-        queryset.update(comment_approved=True)
+        queryset.update(comment_approved=False)
 
     approve_comments.short_description = 'Approve selected comments'
 
