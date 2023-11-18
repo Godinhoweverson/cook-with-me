@@ -441,9 +441,14 @@ All Python files within the 'cook_recipe' and 'cook_with_me' apps have undergone
 
 ## Accessibility
 
-### Lighthouse
+- Lighthouse was utilized to generate extensive reports on both performance and accessibility for the desktop and mobile versions of the site. The image below showcases the results for the Home page on desktop and mobile, respectively. Furthermore, sitewide results are detailed in the accompanying table.
+All pages have successfully achieved a flawless accessibility score of 100.
 
-#### Home
+- Bugs Fixed:
+- Corrected the order of headings.
+- Added descriptive messages for links.
+
+### Lighthouse
 
 <details>
 <summary><strong>Home</strong></summary>
@@ -452,8 +457,6 @@ All Python files within the 'cook_recipe' and 'cook_with_me' apps have undergone
 ![home-mobile](/static/images/readme/home-mobile-lighthouse.jpg)
 
 </details>
-
-#### Recipes
 
 <details>
 <summary><strong>Recipes</strong></summary>
@@ -470,7 +473,31 @@ All Python files within the 'cook_recipe' and 'cook_with_me' apps have undergone
 <details>
 <summary><strong>Recipes content</strong></summary>
 
-![recipes-desktop](/static/images/readme/recipes-content-desktop.jpg)
-![recipes-mobile](/static/images/readme/recipes-content-mobile.jpg)
+![recipes-content](/static/images/readme/recipes-content-desktop-lighthouse.jpg)
+![recipes-content](/static/images/readme/recipes-content-mobile-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Sign up</strong></summary>
+
+![Sign up](/static/images/readme/signup-desktop-lighthouse.jpg)
+![Sign up](/static/images/readme/signup-mobile-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Login</strong></summary>
+
+![Login](/static/images/readme/login-desktop-lighthouse.jpg)
+![Login](/static/images/readme/login-mobile-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Signout</strong></summary>
+
+![Signout](/static/images/readme/signout-desktop-lighthouse.jpg)
+![Signout](/static/images/readme/signout-mobile-lighthouse.jpg)
 
 </details>
