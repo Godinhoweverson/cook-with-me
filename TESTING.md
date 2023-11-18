@@ -353,3 +353,102 @@ These errors and warnings, while noted, do not compromise the overall performanc
 ![logout-validator](/static/images/readme/logout-validator.jpg)
 
 </details>
+
+I utilized the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  Validator to thoroughly test all CSS code.
+
+<details>
+
+![css-validator](/static/images/readme/css-validator.jpg)
+
+</details>
+
+## PEP8
+
+All Python files within the 'cook_recipe' and 'cook_with_me' apps have undergone scrutiny using the Code Institute PEP8 Linter. Attached are images showcasing the identified errors and the subsequent resolution after addressing them.
+
+
+<details>
+<summary><strong>Admin</strong></summary>
+
+![admin](/static/images/readme/admin-pep8-error.jpg)
+![admin](/static/images/readme/admin-pep8.jpg)
+
+</details>
+
+<details>
+<summary><strong>Forms</strong></summary>
+
+![forms](/static/images/readme/forms-pep8-error.jpg)
+![forms](/static/images/readme/forms-pep8.jpg)
+
+</details>
+
+<details>
+<summary><strong>Model</strong></summary>
+
+![Model](/static/images/readme/model-pep8-errors.jpg)
+![Model](/static/images/readme/model-pep8.jpg)
+
+</details>
+
+<details>
+<summary><strong>Urls</strong></summary>
+
+![Urls](/static/images/readme/urls-pep8-error.jpg)
+![Ulrs](/static/images/readme/urls-pep8.jpg)
+
+</details>
+
+<details>
+<summary><strong>Views</strong></summary>
+
+![Views](/static/images/readme/views-pep8-error.jpg)
+![Views](/static/images/readme/views-pep8.jpg)
+
+</details>
+
+<details>
+<summary><strong>Admin Test</strong></summary>
+
+![admin test](/static/images/readme/admin-test-error.jpg)
+![admin test](/static/images/readme/admin-test.jpg)
+
+</details>
+
+<details>
+<summary><strong>Forms Test</strong></summary>
+
+![forms test](/static/images/readme/forms-test-error.jpg)
+![forms test](/static/images/readme/forms-test.jpg)
+
+</details>
+
+<details>
+<summary><strong>Model</strong></summary>
+
+![Model test](/static/images/readme/model-test-error.jpg)
+![Model test](/static/images/readme/model-test.jpg)
+
+</details>
+
+<details>
+<summary><strong>Views test</strong></summary>
+
+![Views](/static/images/readme/views-test-error.jpg)
+![Views](/static/images/readme/views-test.jpg)
+
+</details>
+
+## Accessibility
+
+### Lighthouse
+
+#### Home
+
+<details>
+<summary><strong>Home</strong></summary>
+
+![home-desktop](/static/images/readme/home-desktop-lighthouse.jpg)
+![home-mobile](/static/images/readme/home-mobile-lighthouse.jpg)
+
+</details>
