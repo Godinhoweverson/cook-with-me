@@ -452,3 +452,25 @@ All Python files within the 'cook_recipe' and 'cook_with_me' apps have undergone
 ![home-mobile](/static/images/readme/home-mobile-lighthouse.jpg)
 
 </details>
+
+#### Recipes
+
+<details>
+<summary><strong>Recipes</strong></summary>
+
+![recipes-desktop](/static/images/readme/recipes-desktop-lighthouse.jpg)
+![recipes-mobile](/static/images/readme/recipes-mobile-lighthouse.jpg)
+
+</details>
+
+#### Recipes content
+
+- All recipe content has undergone thorough testing, achieving a perfect accessibility score of 100 according to Lighthouse testing.
+
+<details>
+<summary><strong>Recipes content</strong></summary>
+
+![recipes-desktop](/static/images/readme/recipes-content-desktop.jpg)
+![recipes-mobile](/static/images/readme/recipes-content-mobile.jpg)
+
+</details>

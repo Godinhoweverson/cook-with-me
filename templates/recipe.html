@@ -13,12 +13,12 @@
                 <img src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
             </div>
             <div class="card-body pt-0">
-                 <h5><a href="{% url 'recipe_content' recipe.id %}">{{ recipe.title }}</a></h5>
+                 <h2 class="title-card"><a href="{% url 'recipe_content' recipe.id %}">{{ recipe.title }}</a></h2>
                  <a href="{% url 'recipe_like' recipe.id %}">
                     {% if user in recipe.likes.all %}
-                        <i class="fa-solid fa-heart liked"></i>
+                        <i class="fa-solid fa-heart liked" aria-label="If the heart is red, it indicates that the user has given a like"></i>
                     {% else %}
-                        <i class="fa-regular fa-heart liked"></i>
+                        <i class="fa-regular fa-heart liked" aria-label="If the heart is not red, it signifies that the user hasn't given a like."></i>
                     {% endif %}
                  </a> <span>{{ recipe.likes.count }}</span>
             </div>

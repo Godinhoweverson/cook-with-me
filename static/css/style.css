@@ -93,8 +93,8 @@ body {
     
 }
 
-.recipe-card h5{
-    font-weight: 600;
+.title-card{
+    font-size: 20px;
     text-align: center;
 }
 
@@ -129,7 +129,7 @@ body {
     font-size: 3.5vw;
 }
 
-.col-md-6 h2{
+.title-content{
     padding: 20px;
     font-size: 40px;
 }
