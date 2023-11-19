@@ -451,17 +451,27 @@ All pages have successfully achieved a flawless accessibility score of 100.
 ### Lighthouse
 
 <details>
-<summary><strong>Home</strong></summary>
+<summary><strong>Home desktop</strong></summary>
 
 ![home-desktop](/static/images/readme/home-desktop-lighthouse.jpg)
+
+</details>
+<summary><strong>Home mobile</strong></summary>
+
 ![home-mobile](/static/images/readme/home-mobile-lighthouse.jpg)
 
 </details>
 
 <details>
-<summary><strong>Recipes</strong></summary>
+<summary><strong>Recipes desktop</strong></summary>
 
 ![recipes-desktop](/static/images/readme/recipes-desktop-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Recipes mobile</strong></summary>
+
 ![recipes-mobile](/static/images/readme/recipes-mobile-lighthouse.jpg)
 
 </details>
@@ -471,33 +481,96 @@ All pages have successfully achieved a flawless accessibility score of 100.
 - All recipe content has undergone thorough testing, achieving a perfect accessibility score of 100 according to Lighthouse testing.
 
 <details>
-<summary><strong>Recipes content</strong></summary>
+<summary><strong>Recipes content desktop</strong></summary>
 
 ![recipes-content](/static/images/readme/recipes-content-desktop-lighthouse.jpg)
+
+</details>
+<details>
+<summary><strong>Recipes content mobile</strong></summary>
+
 ![recipes-content](/static/images/readme/recipes-content-mobile-lighthouse.jpg)
 
 </details>
 
 <details>
-<summary><strong>Sign up</strong></summary>
+<summary><strong>Sign up desktop</strong></summary>
 
 ![Sign up](/static/images/readme/signup-desktop-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Sign up mobile</strong></summary>
+
 ![Sign up](/static/images/readme/signup-mobile-lighthouse.jpg)
 
 </details>
 
 <details>
-<summary><strong>Login</strong></summary>
+<summary><strong>Login desktop</strong></summary>
 
 ![Login](/static/images/readme/login-desktop-lighthouse.jpg)
+
+</details>
+<details>
+<summary><strong>Login mobile</strong></summary>
+
 ![Login](/static/images/readme/login-mobile-lighthouse.jpg)
 
 </details>
 
 <details>
-<summary><strong>Signout</strong></summary>
+<summary><strong>Signout desktop</strong></summary>
 
 ![Signout](/static/images/readme/signout-desktop-lighthouse.jpg)
+
+</details>
+
+<details>
+<summary><strong>Signout mobile </strong></summary>
+
 ![Signout](/static/images/readme/signout-mobile-lighthouse.jpg)
 
 </details>
+
+## Wave
+
+The WAVE web accessibility tool was employed to assess the accessibility of a web application, and it identified a total of 4 errors and 6 structural elements. These results are crucial for ensuring that the web content is inclusive and can be accessed by users with diverse abilities.
+
+- Errors (4):
+The tool flagged 4 instances of "Empty Link" errors. Empty links can pose accessibility challenges, as users relying on screen readers or other assistive technologies may not receive meaningful information about the purpose or destination of the link. Addressing these errors is essential for providing a seamless and comprehensible experience for all users.
+
+- Structural Elements (6):
+The evaluation also revealed the presence of 6 essential structural elements. These elements play a fundamental role in organizing and presenting content in a well-structured manner, contributing to a more accessible user experience. The structural elements identified include:
+
+Heading Level
+Unordered List
+Header
+Navigation
+Footer
+
+Each of these elements serves a specific purpose in web page design, aiding in navigation, content hierarchy, and overall user comprehension.
+
+- Resolution
+All identified errors and structural issues have been successfully addressed. The corrective actions taken ensure that the web application aligns with accessibility standards, providing an inclusive and user-friendly experience for individuals with diverse needs.
+
+## Bugs
+
+#### Issue: Images Not Displaying After Heroku Deployment
+- Upon deploying the application on Heroku, images within forms failed to appear. The console reported the following error:
+
+<strong>register.fdb3b090e8a2.jpeg:1
+Failed to load resource: the server responded with a status of 404.</strong>
+
+#### Resolution
+- With the assistance of mentor Narender Singh, we identified and implemented the following solution:
+
+#### CSS Adjustment
+- The background image was removed from the style.css file to eliminate potential conflicts or loading issues.
+
+#### HTML Modification
+- Image tags (<img>) were added to the signup.html, signin.html, and signout.html files to explicitly include the images in the respective forms.
+
+#### Result
+- After these modifications, the images displayed properly on the web pages, resolving the issue encountered post-deployment.
