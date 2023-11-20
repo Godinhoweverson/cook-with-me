@@ -456,6 +456,8 @@ All pages have successfully achieved a flawless accessibility score of 100.
 ![home-desktop](/static/images/readme/home-desktop-lighthouse.jpg)
 
 </details>
+
+<details>
 <summary><strong>Home mobile</strong></summary>
 
 ![home-mobile](/static/images/readme/home-mobile-lighthouse.jpg)
@@ -574,3 +576,8 @@ Failed to load resource: the server responded with a status of 404.</strong>
 
 #### Result
 - After these modifications, the images displayed properly on the web pages, resolving the issue encountered post-deployment.
+
+
+## Conclusion
+
+The extensive testing process, which encompassed manual testing, unit testing, validation, and accessibility checks, underlines our commitment to delivering a high-quality, accessible, and user-friendly web application. The resolution of identified issues ensures a smooth and reliable user experience across diverse devices and user scenarios. As a result, the application is well-prepared for deployment and use by a wide audience. Our focus on quality assurance guarantees that users will encounter a seamless and enjoyable experience, reinforcing the reliability and inclusivity of the web application.
