@@ -2,6 +2,8 @@
 
 Welcome to Cook with Me, a delightful culinary journey where the art of cooking meets the joy of sharing. This website is dedicated to bringing the magic of recipes to your fingertips, allowing you to explore, create, and connect with fellow food enthusiasts. Whether you're a seasoned chef or a kitchen novice, there's something for everyone in our vibrant community.
 
+I have conducted a thorough evaluation to ensure the responsiveness of my website through a comprehensive [Responsive Design check](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fcook-with-me-0c33f788a701.herokuapp.com%2F&width=1400&height=700).
+
 ![responsive](/static/images/readme/responsive.png)
 
 ## Table Of Contents
@@ -469,7 +471,9 @@ The full testing documentation can be found in [TESTING.md](TESTING.md)
 
 - [Font Awesome](https://fontawesome.com/) Utilized for incorporating icons into the site, adding visually appealing and meaningful graphical elements.
 
-- [Am I Responsive?](http://ami.responsivedesign.is/) Applied for creating responsive design images, allowing you to visualize how the website appears across various devices and screen sizes.
+- [Am I Responsive?](http://ami.responsivedesign.is/) Applied for creating responsive design images.
+
+- [Responsive Design check](https://responsivedesignchecker.com/) used to visualize how the website appears across various devices and screen sizes.
 
 - [Chatgpt](https://openai.com/blog/chatgpt) Utilized to generate all written content, leveraging advanced natural language processing capabilities to create dynamic and interactive text throughout the application.
 
@@ -614,6 +618,14 @@ In the "Settings" tab, reveal config vars and input the required hidden variable
 
 #### Deploy:
 - Deploy the application.
+
+<details>
+<summary><strong>Deploy</strong></summary>
+
+![admin](/static/images/readme/deploy.jpg)
+
+</details>
+
 
 ### Fork the Repository
 - Go to the GitHub Repository:
