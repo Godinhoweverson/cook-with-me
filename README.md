@@ -2,6 +2,11 @@
 
 Welcome to Cook with Me, a delightful culinary journey where the art of cooking meets the joy of sharing. This website is dedicated to bringing the magic of recipes to your fingertips, allowing you to explore, create, and connect with fellow food enthusiasts. Whether you're a seasoned chef or a kitchen novice, there's something for everyone in our vibrant community.
 
+Access the Fully Deployed Project
+You can explore the live version of our project by visiting the following link:
+
+[Project Deployment Link](https://cook-with-me-0c33f788a701.herokuapp.com/)
+
 I have conducted a thorough evaluation to ensure the responsiveness of my website through a comprehensive [Responsive Design check](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fcook-with-me-0c33f788a701.herokuapp.com%2F&width=1400&height=700).
 
 ![responsive](/static/images/readme/responsive.png)

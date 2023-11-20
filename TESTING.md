@@ -18,9 +18,9 @@ If a test case passes, please flag it as "Pass" in your testing documentation. I
 
 | Test |Result  |
 |--|--|
-|Load the webpage containing the navigation bar | Pass |
+|Load the webpage containing the navigation bar. | Pass |
 |Verify that the navigation bar is visible at the top of the page.| Pass|
-|Cook with me" logo is present, correctly positioned, and functions as a navigation link back to the home page|Pass|
+|Cook with me" logo is present, correctly positioned, and functions as a navigation link back to the home page.|Pass|
 |Check that the navigation links (Home, Recipes, Register/Login/Logout) are displayed.|Pass|
 
 #### Navbar Toggle Test (Mobile Responsiveness)
