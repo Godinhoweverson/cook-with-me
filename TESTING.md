@@ -172,7 +172,7 @@ If a test case passes, please flag it as "Pass" in your testing documentation. I
 |--------------------------------------------------------------------------------------------------|--------|
 | Click the "Edit" button.                                                                         | Pass   |
 | Modify the comment text.                                                                         | Pass   |
-| Click the "Publish" or "Save Changes" button.                                                    | Pass   |
+| Click the "Update Comment" button.                                                               | Pass   |
 | Verify that the edited comment appears in the comments section.                                  | Pass   |
 | Confirm that the changes to the user's name, creation date, and comment body are reflected.      | Pass   |
 
@@ -540,26 +540,43 @@ All pages have successfully achieved a flawless accessibility score of 100.
 
 The WAVE web accessibility tool was employed to assess the accessibility of a web application, and it identified a total of 4 errors and 6 structural elements. These results are crucial for ensuring that the web content is inclusive and can be accessed by users with diverse abilities.
 
-- Errors (4):
+Errors (4):
 The tool flagged 4 instances of "Empty Link" errors. Empty links can pose accessibility challenges, as users relying on screen readers or other assistive technologies may not receive meaningful information about the purpose or destination of the link. Addressing these errors is essential for providing a seamless and comprehensible experience for all users.
 
-- Structural Elements (6):
+Structural Elements (6):
 The evaluation also revealed the presence of 6 essential structural elements. These elements play a fundamental role in organizing and presenting content in a well-structured manner, contributing to a more accessible user experience. The structural elements identified include:
 
-Heading Level
-Unordered List
-Header
-Navigation
-Footer
+- Heading Level
+- Unordered List
+- Header
+- Navigation
+- Footer
 
 Each of these elements serves a specific purpose in web page design, aiding in navigation, content hierarchy, and overall user comprehension.
 
-- Resolution
+Resolution
 All identified errors and structural issues have been successfully addressed. The corrective actions taken ensure that the web application aligns with accessibility standards, providing an inclusive and user-friendly experience for individuals with diverse needs.
 
 ## Bugs
 
-#### Issue: Images Not Displaying After Heroku Deployment
+### Heroku Deployment 
+
+#### Problem
+During the deployment process on the Heroku platform, an issue surfaced and prompted a comprehensive investigation. Upon thorough analysis, it was identified that the python-apt==2.4.0+ubuntu1 package was causing complications in the deployment pipeline.
+
+#### Problem Details
+The presence of python-apt==2.4.0+ubuntu1 in the requirements.txt file was discovered to be irrelevant to the core functionality of the project. Despite its lack of relevance, its inclusion in the list of dependencies was leading to deployment challenges on Heroku, impeding the successful launch of the application.
+
+#### Solution
+To address this deployment issue and ensure a seamless deployment process on Heroku, the decision was made to eliminate the python-apt==2.4.0+ubuntu1 line from the requirements.txt file.
+
+#### Implementation
+The necessary modification has been applied to the requirements.txt file, removing the reference to python-apt==2.4.0+ubuntu1. This adjustment aims to streamline the deployment experience on Heroku and mitigate any challenges associated with the unnecessary package.
+
+#### Result
+By proactively removing the extraneous dependency python-apt==2.4.0+ubuntu1, I have successfully resolved the deployment issues, paving the way for smooth and successful deployments on Heroku. This update not only addresses the specific problem at hand but also contributes to the overall efficiency and reliability of the project, particularly during the testing and deployment phases.
+
+### Issue: Images Not Displaying After Heroku Deployment
 - Upon deploying the application on Heroku, images within forms failed to appear. The console reported the following error:
 
 <strong>register.fdb3b090e8a2.jpeg:1
